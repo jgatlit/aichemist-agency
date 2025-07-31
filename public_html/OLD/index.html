@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIchemist.agency | AI Process Automation for SMBs</title>
+    <link rel="icon" type="image/png" href="images/AIchemist02thumb_00.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://rsms.me/inter/inter.css');
+        html { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-black">
+
+    <div id="app-container" class="min-h-screen">
+        <!-- Navigation Component -->
+        <header class="bg-black/95 backdrop-blur-lg fixed top-0 w-full z-50 border-b border-yellow-500/30">
+          <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+              <div class="flex items-center gap-3 cursor-pointer" data-nav="home">
+                <img src="images/AIchemist02thumb_00.png" alt="AIchemist.agency Logo" class="h-10 w-10 rounded-lg">
+                <span class="text-xl font-bold text-yellow-500">AIchemist.agency</span>
+              </div>
+
+              <ul class="hidden md:flex items-center gap-8">
+                <li><button data-nav="solutions" class="nav-link text-white hover:text-green-400 transition-colors">Solutions</button></li>
+                <li><button data-nav="process" class="nav-link text-white hover:text-green-400 transition-colors">Process</button></li>
+                <li><button data-nav="results" class="nav-link text-white hover:text-green-400 transition-colors">Results</button></li>
+              </ul>
+
+              <div class="flex items-center gap-4">
+                <button data-nav="contact" class="hidden md:block bg-gradient-to-r from-yellow-500 to-green-500 text-black px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all">Get Your Process Assessment</button>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-lg border-t border-yellow-500/30">
+              <div class="px-4 py-6 space-y-4">
+                <button data-nav="solutions" class="mobile-nav-link block w-full text-left text-white hover:text-green-400 py-2">Solutions</button>
+                <button data-nav="process" class="mobile-nav-link block w-full text-left text-white hover:text-green-400 py-2">Process</button>
+                <button data-nav="results" class="mobile-nav-link block w-full text-left text-white hover:text-green-400 py-2">Results</button>
+                <button data-nav="contact" class="mobile-nav-link block w-full bg-gradient-to-r from-yellow-500 to-green-500 text-black px-6 py-3 rounded-full font-semibold mt-4">Get Your Process Assessment</button>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main>
+          <!-- Home Page View -->
+          <section id="view-home" class="page-view bg-black text-white">
+            <div class="min-h-screen flex items-center relative overflow-hidden pt-20">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-yellow-500/10"></div>
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                  <div class="lg:pr-4">
+                    <div class="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                      <span>Human-Centric AI That Amplifies Expertise</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">Transform Your <span class="bg-gradient-to-r from-yellow-500 to-green-500 bg-clip-text text-transparent">Expertise Into Systematic</span> Revenue Growth</h1>
+                    <p class="text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">AI-powered automation that amplifies your knowledge without replacing relationships. Turn your manual processes into scalable business assets that work 24/7.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 mb-8">
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">20+</div><div class="text-xs lg:text-sm text-green-400">Qualified Conversations/Month</div></div>
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">746%</div><div class="text-xs lg:text-sm text-green-400">Proven ROI Framework</div></div>
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">30</div><div class="text-xs lg:text-sm text-green-400">Day Implementation</div></div>
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">15+</div><div class="text-xs lg:text-sm text-green-400">Years Enterprise Experience</div></div>
+                    </div>
+                    <button data-nav="contact" class="bg-gradient-to-r from-yellow-500 to-green-500 text-black px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold text-base lg:text-lg hover:shadow-xl transition-all flex items-center gap-2 mb-8 lg:mb-0">
+                      Get Your Process Assessment
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 lg:h-5 lg:w-5"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <div class="hidden lg:block mt-8 space-y-4">
+                      <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-1 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><h4 class="font-semibold text-white">Turn Expertise Into Automated Revenue</h4><p class="text-gray-400 text-sm">Transform your knowledge into AI-powered systems that generate leads 24/7</p></div></div>
+                      <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-1 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><h4 class="font-semibold text-white">Generate 20+ Qualified Conversations Monthly</h4><p class="text-gray-400 text-sm">Systematic lead generation and nurturing that fills your pipeline consistently</p></div></div>
+                      <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-1 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><h4 class="font-semibold text-white">Never Lose Another Qualified Prospect</h4><p class="text-gray-400 text-sm">Automated nurturing systems that convert interest into revenue</p></div></div>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="bg-white/5 backdrop-blur-lg border border-yellow-500/20 rounded-2xl p-6 lg:p-8 lg:sticky lg:top-24 max-w-lg lg:max-w-none">
+                      <h3 class="text-xl lg:text-2xl font-bold text-yellow-500 mb-6 text-center">Calculate Your Automation ROI</h3>
+                      <div class="space-y-6">
+                        <div><label class="block text-green-400 font-medium mb-2 text-sm lg:text-base">Monthly Revenue ($)</label><input type="number" id="roi-monthly-revenue" value="100000" class="w-full p-3 lg:p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none text-sm lg:text-base" placeholder="100000"/></div>
+                        <div><label class="block text-green-400 font-medium mb-2 text-sm lg:text-base">Team Size (Sales/Marketing)</label><input type="number" id="roi-sales-reps" value="3" class="w-full p-3 lg:p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none text-sm lg:text-base" placeholder="3"/></div>
+                        <div><label class="block text-green-400 font-medium mb-2 text-sm lg:text-base">Hours/Week on Manual Tasks</label><input type="number" id="roi-close-rate" value="15" class="w-full p-3 lg:p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none text-sm lg:text-base" placeholder="15"/></div>
+                        <div class="bg-gradient-to-r from-yellow-500 to-green-500 text-black p-4 lg:p-6 rounded-xl text-center"><div id="roi-result" class="text-2xl lg:text-3xl font-bold mb-2">$180,000</div><div class="font-semibold text-sm lg:text-base">Annual Value from Process Automation</div></div>
+                        <div class="text-center"><button data-nav="contact" class="bg-black/30 text-white border border-yellow-500/40 px-6 py-3 rounded-lg hover:bg-yellow-500/10 transition-all text-sm w-full">Get Detailed Assessment</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="py-20 bg-gray-900">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Why Choose <span class="text-yellow-500">AIchemist.agency</span></h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:transform hover:-translate-y-2"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-black"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.685a1 1 0 0 0-1.197 0l-3.586 2.685a.5.5 0 0 1-.81-.47L8.523 12.9a.5.5 0 0 1 .126-.37l-3.234-3.148a.5.5 0 0 1 .286-.852l8.248-.455a.5.5 0 0 1 .476.305l3.201 7.28a.5.5 0 0 1-.03.54Z"/><path d="M12 2v5"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Battle-Tested Enterprise Technology</h3><p class="text-gray-300">The same AI frameworks that generated 746% ROI for global tech companies, now customized for specialized businesses and industry experts.</p></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:transform hover:-translate-y-2"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-black"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Rapid Implementation & Quick Wins</h3><p class="text-gray-300">30-day Phase I deployment with immediate pipeline impact. Start seeing systematic lead generation and process improvements within your first month.</p></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:transform hover:-translate-y-2"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-black"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Human-Centric AI Approach</h3><p class="text-gray-300">Technology that amplifies your expertise rather than replacing relationships. AI enhances decision-making while preserving the personal touch that closes deals.</p></div>
+                </div>
+              </div>
+            </section>
+            <section class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                  <div class="border-l-4 border-red-500 pl-8"><h3 class="text-3xl font-bold text-red-400 mb-6">Your Expertise Is Trapped</h3><p class="text-gray-300 text-lg leading-relaxed">Your valuable knowledge is locked in time-consuming manual processes. Lead generation bottlenecks, manual research loads, and inconsistent follow-ups prevent your expertise from scaling systematically.</p></div>
+                  <div class="border-l-4 border-green-500 pl-8"><h3 class="text-3xl font-bold text-green-400 mb-6">Transform Knowledge Into Automated Systems</h3><p class="text-gray-300 text-lg leading-relaxed">Turn your expertise into intelligent automation that works 24/7. Systematic lead generation, automated nurturing sequences, and AI-powered insights that scale your knowledge without losing the human touch.</p></div>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <!-- Solutions Page View -->
+          <section id="view-solutions" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold mb-6">Where Industry Expertise Meets <span class="text-yellow-500">Intelligent Automation</span></h1><p class="text-xl text-gray-300 max-w-3xl mx-auto">Custom AI solutions that enhance your competitive advantage and transform your methodology into scalable business assets</p></div>
+                <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">AI-Powered Lead Generation & Sales Automation</h3><p class="text-gray-400 mb-4">For Professional Services ($1M-$10M revenue)</p><div class="mb-6 flex-grow"><h4 class="font-semibold text-white mb-2">Transform Prospects Into Clients With Systematic Precision:</h4><ul class="space-y-2 pl-4 list-disc text-gray-300 text-sm"><li>Intelligent lead enrichment and qualification</li><li>Personalized email sequences that convert</li><li>LinkedIn automation that builds relationships</li><li>Pipeline management that prevents follow-up gaps</li></ul></div><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Value:</strong> Generate 20+ qualified conversations monthly while maintaining the personal touch that closes deals.</p></div>
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">Process Authority & Compliance Automation</h3><p class="text-gray-400 mb-4">For Regulated Industries & Specialists</p><div class="mb-6 flex-grow"><h4 class="font-semibold text-white mb-2">Ensure Compliance While Accelerating Growth:</h4><ul class="space-y-2 pl-4 list-disc text-gray-300 text-sm"><li>Automated regulatory monitoring and updates</li><li>Process validation and documentation systems</li><li>Risk assessment and mitigation workflows</li><li>Industry-specific compliance tracking</li></ul></div><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Value:</strong> Maintain perfect compliance while reducing administrative overhead by 60%.</p></div>
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">Custom Platform Development</h3><p class="text-gray-400 mb-4">For Proprietary Methodologies</p><div class="mb-6 flex-grow"><h4 class="font-semibold text-white mb-2">Build Your Competitive Advantage Into Software:</h4><ul class="space-y-2 pl-4 list-disc text-gray-300 text-sm"><li>Interactive assessment and recommendation engines</li><li>Community engagement and education platforms</li><li>AI-powered chatbots trained on your expertise</li><li>Custom dashboards and analytics</li></ul></div><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Value:</strong> Transform your methodology into a scalable platform that delivers value at scale.</p></div>
+                </div>
+                <div class="bg-gradient-to-r from-yellow-500/10 to-green-500/10 rounded-2xl p-8 border border-yellow-500/30">
+                  <h2 class="text-3xl font-bold text-center text-yellow-500 mb-8">Universal Value Propositions</h2>
+                  <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-4">
+                      <h3 class="text-xl font-bold text-green-400 mb-2">Human-Centric AI</h3>
+                      <p class="text-gray-300">Technology that amplifies expertise rather than replacing relationships.</p>
+                    </div>
+                    <div class="text-center p-4">
+                      <h3 class="text-xl font-bold text-green-400 mb-2">Rapid Implementation</h3>
+                      <p class="text-gray-300">30-day deployment with immediate process improvements.</p>
+                    </div>
+                    <div class="text-center p-4">
+                      <h3 class="text-xl font-bold text-green-400 mb-2">Systematic Scalability</h3>
+                      <p class="text-gray-300">Turn one-time expertise into repeatable, automated systems.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Process Page View -->
+          <section id="view-process" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold mb-6"><span class="text-yellow-500">3-Phase</span> Implementation Framework</h1><p class="text-xl text-gray-300 max-w-3xl mx-auto">Rapid deployment with immediate impact - validate improvements before scaling your AI automation systems</p></div>
+                <div class="space-y-12">
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20"><div class="flex items-center gap-4 mb-6"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center"><span class="text-2xl font-bold text-black">I</span></div><div><h3 class="text-2xl font-bold text-yellow-500">Phase I: Foundation (30 Days)</h3><p class="text-gray-400">Rapid Deployment, Immediate Impact</p></div></div><div class="grid md:grid-cols-2 gap-8"><div><h4 class="font-semibold text-white mb-4">Deliverables:</h4><ul class="space-y-2 text-gray-300"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> LinkedIn content strategy & profile optimization</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> AI-driven lead enrichment system</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Email automation setup and warmup</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Basic pipeline management dashboard</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> "Pocket CMO" strategic guidance chatbot</li></ul></div><div><h4 class="font-semibold text-white mb-4">Process Outcome:</h4><p class="text-green-400">Systematic lead flow and qualification processes established</p></div></div></div>
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20"><div class="flex items-center gap-4 mb-6"><div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center"><span class="text-2xl font-bold text-white">II</span></div><div><h3 class="text-2xl font-bold text-yellow-500">Phase II: Acceleration (60-90 Days)</h3><p class="text-gray-400">Scale What's Working, Optimize What's Not</p></div></div><div class="grid md:grid-cols-2 gap-8"><div><h4 class="font-semibold text-white mb-4">Deliverables:</h4><ul class="space-y-2 text-gray-300"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Advanced automation workflows</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Performance optimization and A/B testing</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Enhanced content generation systems</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Integrated analytics and reporting</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Custom feature development</li></ul></div><div><h4 class="font-semibold text-white mb-4">Process Outcome:</h4><p class="text-green-400">Systematic conversion and nurturing processes optimized</p></div></div></div>
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20"><div class="flex items-center gap-4 mb-6"><div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center"><span class="text-2xl font-bold text-white">III</span></div><div><h3 class="text-2xl font-bold text-yellow-500">Phase III: Scale (90-120 Days)</h3><p class="text-gray-400">Enterprise-Level Automation at SMB Scale</p></div></div><div class="grid md:grid-cols-2 gap-8"><div><h4 class="font-semibold text-white mb-4">Deliverables:</h4><ul class="space-y-2 text-gray-300"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Multi-channel integration</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Advanced competitive intelligence</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Custom process enhancements</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Complete analytics dashboard</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Team training and documentation</li></ul></div><div><h4 class="font-semibold text-white mb-4">Process Outcome:</h4><p class="text-green-400">Comprehensive automation ecosystem fully operational</p></div></div></div>
+                </div>
+                <div class="mt-16 text-center bg-gradient-to-r from-yellow-500/10 to-green-500/10 rounded-2xl p-8 border border-yellow-500/30">
+                  <h2 class="text-3xl font-bold text-yellow-500 mb-2">Flexible Investment Model</h2>
+                  <p class="text-gray-300 mb-8 max-w-3xl mx-auto">Our flexible monthly investment model is designed to maximize your ROI while minimizing risk.</p>
+                  <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-white/10 p-6 rounded-xl text-left"><h3 class="font-bold text-yellow-400 text-lg">Active Build Phases</h3><p class="text-sm text-gray-300 mt-1">Monthly investment during active development only.</p><p class="text-sm text-green-400 font-semibold mt-2">Benefit: You pay for results, not time.</p></div>
+                    <div class="bg-white/10 p-6 rounded-xl text-left"><h3 class="font-bold text-yellow-400 text-lg">Maintenance & Optimization</h3><p class="text-sm text-gray-300 mt-1">Ongoing support and system refinement.</p><p class="text-sm text-green-400 font-semibold mt-2">Benefit: Ensure peak performance.</p></div>
+                    <div class="bg-white/10 p-6 rounded-xl text-left"><h3 class="font-bold text-yellow-400 text-lg">System Access & Hosting</h3><p class="text-sm text-gray-300 mt-1">Continued access with infrastructure management.</p><p class="text-sm text-green-400 font-semibold mt-2">Benefit: No vendor lock-in, your systems.</p></div>
+                  </div>
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white/5 p-4 rounded-lg"><h4 class="font-semibold text-white">Pay for Progress</h4><p class="text-xs text-gray-400">Investment only during active development phases</p></div>
+                    <div class="bg-white/5 p-4 rounded-lg"><h4 class="font-semibold text-white">Predictable Budgeting</h4><p class="text-xs text-gray-400">Clear monthly investment with no surprise costs</p></div>
+                    <div class="bg-white/5 p-4 rounded-lg"><h4 class="font-semibold text-white">Scalable Investment</h4><p class="text-xs text-gray-400">Adjust investment level based on business growth</p></div>
+                    <div class="bg-white/5 p-4 rounded-lg"><h4 class="font-semibold text-white">Risk Mitigation</h4><p class="text-xs text-gray-400">Start small, scale what works, pause when needed</p></div>
+                  </div>
+                </div>
+                <div class="mt-16 text-center">
+                    <h2 class="text-3xl font-bold text-yellow-500 mb-8">Risk Mitigation</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white/5 p-6 rounded-xl border border-green-500/20"><h3 class="font-semibold text-green-400 mb-2">Phased Implementation</h3><p class="text-gray-300 text-sm">Validate improvements before scaling</p></div>
+                        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20"><h3 class="font-semibold text-yellow-400 mb-2">Quick Process Wins</h3><p class="text-gray-300 text-sm">Immediate efficiency gains in first 30 days</p></div>
+                        <div class="bg-white/5 p-6 rounded-xl border border-blue-500/20"><h3 class="font-semibold text-blue-400 mb-2">Your Data & Control</h3><p class="text-gray-300 text-sm">No vendor lock-in, your systems</p></div>
+                        <div class="bg-white/5 p-6 rounded-xl border border-purple-500/20"><h3 class="font-semibold text-purple-400 mb-2">Human-in-the-Loop</h3><p class="text-gray-300 text-sm">AI enhances rather than replaces decision-making</p></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Results Page View -->
+          <section id="view-results" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold mb-6"><span class="text-yellow-500">Proven Results</span> & Success Stories</h1><p class="text-xl text-gray-300 max-w-3xl mx-auto">Real transformations: Enhanced efficiency, systematic growth, and scalable expertise amplification</p></div>
+                <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20"><div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Professional Services Transformation</h3><p class="text-gray-300 mb-4">Specialized consulting firm turned expertise into systematic revenue generation.</p><div class="space-y-2"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>600% increase</strong> in qualified leads in 90 days</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>50% reduction</strong> in sales cycle length</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>2+ hours weekly</strong> time savings per team member</span></div></div></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20"><div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Process Authority Success</h3><p class="text-gray-300 mb-4">Regulatory compliance firm automated monitoring while maintaining perfect standards.</p><div class="space-y-2"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>100% compliance</strong> maintained, 75% less review time</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">Systematic validation preventing costly issues</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">Enhanced operational efficiency & risk mitigation</span></div></div></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20"><div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Platform Development Impact</h3><p class="text-gray-300 mb-4">Health organization transformed methodology into scalable digital platform.</p><div class="space-y-2"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>300% increase</strong> in member engagement</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">AI tool reducing consultation time by <strong>60%</strong></span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">Community platform generating recurring revenue</span></div></div></div>
+                </div>
+                <div class="bg-gradient-to-r from-yellow-500/10 to-green-500/10 rounded-2xl p-8 border border-yellow-500/30 mb-12">
+                  <h2 class="text-3xl font-bold text-center text-yellow-500 mb-8">What We Measure</h2>
+                  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center"><div class="text-4xl font-bold text-green-400 mb-2">Speed</div><div class="text-gray-300">System deployment and adoption rates</div></div>
+                    <div class="text-center"><div class="text-4xl font-bold text-yellow-500 mb-2">Efficiency</div><div class="text-gray-300">Time savings on manual tasks and processes</div></div>
+                    <div class="text-center"><div class="text-4xl font-bold text-blue-400 mb-2">Quality</div><div class="text-gray-300">Lead enrichment accuracy and conversion rates</div></div>
+                    <div class="text-center"><div class="text-4xl font-bold text-purple-400 mb-2">Scalability</div><div class="text-gray-300">Revenue growth without proportional resource increase</div></div>
+                  </div>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20">
+                  <h2 class="text-3xl font-bold text-center text-yellow-500 mb-8">Success Indicators</h2>
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div><h3 class="text-xl font-bold text-green-400 mb-4">Process Achievements</h3><ul class="space-y-3"><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Automated systems replacing manual workflows</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Systematic lead nurturing preventing follow-up gaps</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Enhanced pipeline visibility and organization</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Consistent content production without bottlenecks</span></li></ul></div>
+                    <div><h3 class="text-xl font-bold text-blue-400 mb-4">Business Impact</h3><ul class="space-y-3"><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Measurable time savings in repetitive tasks</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Improved sales process standardization</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Strategic decision-making enhanced through AI insights</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Scalable growth without proportional overhead increase</span></li></ul></div>
+                  </div>
+                </div>
+                <div class="mt-12 text-center bg-yellow-500/10 rounded-xl p-6 border border-yellow-500/30">
+                  <p class="text-gray-300 italic">"We measure success through enhanced efficiency, systematic growth, and scalable expertise amplification. Our value comes from rapid implementation of proven capabilities that transform knowledge into automated revenue generation."</p>
+                  <p class="text-yellow-400 mt-4 text-sm font-semibold">- Battle-tested enterprise technology, customized for specialized businesses</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Page View -->
+          <section id="view-contact" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12"><h1 class="text-5xl font-bold mb-6">Get Your <span class="text-yellow-500">Process Assessment</span></h1><p class="text-xl text-gray-300">Discover how to transform your expertise into systematic revenue growth through intelligent automation</p></div>
+                <div class="bg-white/5 backdrop-blur-lg border border-yellow-500/20 rounded-2xl p-8">
+                  <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                      <div><label class="block text-green-400 font-medium mb-2">Your Name</label><input type="text" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none" required/></div>
+                      <div><label class="block text-green-400 font-medium mb-2">Email Address</label><input type="email" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none" required/></div>
+                    </div>
+                    <div><label class="block text-green-400 font-medium mb-2">Company Name</label><input type="text" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none" required/></div>
+                    <div>
+                      <label class="block text-green-400 font-medium mb-2">Select Your Primary Challenge</label>
+                      <div class="relative">
+                        <select class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none appearance-none" required>
+                          <option value="">Choose your biggest process challenge...</option>
+                          <option value="manual-process">Expertise trapped in time-consuming manual processes</option>
+                          <option value="inconsistent-leads">Inconsistent lead generation and qualification</option>
+                          <option value="content-bottleneck">Content creation and thought leadership bottlenecks</option>
+                          <option value="pipeline-visibility">Pipeline visibility and systematic follow-up</option>
+                          <option value="scaling">Process standardization and team scaling</option>
+                          <option value="compliance">Regulatory compliance and process authority</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none"><path d="m6 9 6 6 6-6"/></svg>
+                      </div>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-yellow-500 to-green-500 text-black py-4 px-8 rounded-xl font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                      Get My Process Assessment
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="mt-12 grid md:grid-cols-3 gap-6 text-center">
+                  <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-yellow-500 mx-auto mb-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><h3 class="font-semibold text-white mb-2">Email</h3><p class="text-gray-300">info@aichemist.agency</p></div>
+                  <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-green-400 mx-auto mb-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><h3 class="font-semibold text-white mb-2">Phone</h3><p class="text-gray-300">1-800-AICHEMIST</p></div>
+                  <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-blue-400 mx-auto mb-4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><h3 class="font-semibold text-white mb-2">Response Time</h3><p class="text-gray-300">Within 24 hours</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer Component -->
+        <footer class="bg-gray-900 text-white py-12 border-t border-yellow-500/20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <img src="images/AIchemist02thumb_00.png" alt="AIchemist.agency Logo" class="h-8 w-8 rounded-lg">
+                  <span class="text-xl font-bold text-yellow-500">AIchemist.agency</span>
+                </div>
+                <p class="text-gray-400 text-sm">Transform industry expertise into intelligent automation that amplifies knowledge without replacing relationships. Where human experience meets AI efficiency.</p>
+              </div>
+              <div><h5 class="font-semibold mb-4">Solutions</h5><ul class="space-y-2 text-sm text-gray-400"><li><button data-nav="solutions" class="hover:text-white transition-colors">AI-Powered Lead Generation</button></li><li><button data-nav="solutions" class="hover:text-white transition-colors">Process Authority & Compliance</button></li><li><button data-nav="solutions" class="hover:text-white transition-colors">Custom Platform Development</button></li><li><button data-nav="solutions" class="hover:text-white transition-colors">Human-Centric AI Solutions</button></li></ul></div>
+              <div><h5 class="font-semibold mb-4">Company</h5><ul class="space-y-2 text-sm text-gray-400"><li><button data-nav="process" class="hover:text-white transition-colors">3-Phase Implementation</button></li><li><button data-nav="results" class="hover:text-white transition-colors">Proven Results</button></li><li><a href="#" class="hover:text-white transition-colors">About</a></li><li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li></ul></div>
+              <div><h5 class="font-semibold mb-4">Contact</h5><ul class="space-y-2 text-sm text-gray-400"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>info@aichemist.agency</span></li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>1-800-AICHEMIST</span></li></ul></div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400"><p>© 2025 AIchemist.agency. All rights reserved. | Where industry expertise meets intelligent automation.</p></div>
+          </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- STATE MANAGEMENT ---
+            let currentView = 'home';
+            let mobileMenuOpen = false;
+
+            // --- DOM ELEMENT REFERENCES ---
+            const pageViews = document.querySelectorAll('.page-view');
+            const navLinks = document.querySelectorAll('[data-nav]');
+            const desktopNavLinks = document.querySelectorAll('.nav-link');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            // ROI Calculator elements
+            const roiRevenueInput = document.getElementById('roi-monthly-revenue');
+            const roiRepsInput = document.getElementById('roi-sales-reps');
+            const roiCloseRateInput = document.getElementById('roi-close-rate');
+            const roiResult = document.getElementById('roi-result');
+
+            // Contact Form
+            const contactForm = document.getElementById('contact-form');
+
+            // --- FUNCTIONS ---
+
+            // Function to switch between "pages"
+            const setCurrentView = (viewName) => {
+                currentView = viewName;
+                pageViews.forEach(view => view.classList.add('hidden'));
+                const activeView = document.getElementById(`view-${viewName}`);
+                if (activeView) {
+                    activeView.classList.remove('hidden');
+                }
+                desktopNavLinks.forEach(link => {
+                    if (link.dataset.nav === viewName) {
+                        link.classList.add('text-green-400');
+                    } else {
+                        link.classList.remove('text-green-400');
+                    }
+                });
+                if (mobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+                window.scrollTo(0, 0);
+            };
+
+            // Function to toggle the mobile menu
+            const toggleMobileMenu = () => {
+                mobileMenuOpen = !mobileMenuOpen;
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            };
+
+            // Function to calculate and display ROI
+            const calculateROI = () => {
+                const monthlyRevenue = parseInt(roiRevenueInput.value) || 0;
+                const salesReps = parseInt(roiRepsInput.value) || 0;
+                const currentAnnualRevenue = monthlyRevenue * 12;
+                const efficiencyGain = currentAnnualRevenue * 0.10;
+                const timeSavingsValue = salesReps * 2 * 52 * 50;
+                const totalROI = Math.round(efficiencyGain + timeSavingsValue);
+                roiResult.textContent = `$${totalROI.toLocaleString()}`;
+            };
+
+            // Function to handle contact form submission
+            const handleFormSubmit = (event) => {
+                event.preventDefault();
+                alert("Thank you! We'll send your custom AI implementation roadmap within 24 hours.");
+                contactForm.reset();
+            };
+
+            // --- EVENT LISTENERS ---
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    setCurrentView(link.dataset.nav);
+                });
+            });
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            roiRevenueInput.addEventListener('input', calculateROI);
+            roiRepsInput.addEventListener('input', calculateROI);
+            roiCloseRateInput.addEventListener('input', calculateROI);
+            contactForm.addEventListener('submit', handleFormSubmit);
+
+            // --- INITIALIZATION ---
+            setCurrentView('home');
+            calculateROI();
+        });
+    </script>
+</body>
+</html>

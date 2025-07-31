@@ -1,0 +1,24 @@
+{
+  "name": "aichemist-agency",
+  "version": "1.0.0",
+  "description": "AIchemist Agentic SaaS - Enterprise-Class Automation for Small Business",
+  "scripts": {
+    "serve": "php -S localhost:8080 -t public_html",
+    "serve:router": "php -S localhost:8080 -t public_html router.php",
+    "lint:php": "php -l public_html/**/*.php",
+    "format": "prettier --write 'public_html/**/*.{html,css,js}'"
+  },
+  "keywords": [
+    "aichemist",
+    "saas",
+    "automation",
+    "ai",
+    "enterprise",
+    "php"
+  ],
+  "author": "AIchemist Agency",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}

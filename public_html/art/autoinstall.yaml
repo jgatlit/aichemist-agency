@@ -1,0 +1,25 @@
+autoinstall:
+  version: 1
+  identity:
+    hostname: windsurf-server
+    username: admin
+    password: "$6$7fK69Y5jUP0jL9sE$01Kxa7XcPWBW1q4xaOhb8/4ZtK2T3XkSrFGZWDOnBmQktAMwgVMhY5qpQOEOsDIbBz7YOVoP/c8L0RTF2EawW."
+  ssh:
+    install-server: true
+    allow-pw: false
+    authorized-keys:
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGqdhS5fGwrZ4LDkJcxLFNfHauy7mMWfKqc99/8sPFf/ jgatlit@JGATLIT"
+  packages:
+    - docker.io
+    - docker-compose
+    - git
+    - curl
+    - ufw
+  storage:
+    layout:
+      name: lvm
+  late-commands:
+    - curtin in-target -- bash -c "mkdir -p /opt/windsurf"
+    - curtin in-target -- bash -c "echo 'export WINDSURF_ENV=prod' >> /etc/profile.d/windsurf.sh"
+    # For user-owned files/actions, use:
+    # - curtin in-target -- bash -c 'su admin -c "mkdir -p /opt/windsurf"'

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aichemist agentic SaaS | AI | Enterprise-Class Automation for Your Small Business</title>
+    <link rel="icon" type="image/png" href="images/AIchemist02thumb_00.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://rsms.me/inter/inter.css');
+        html { font-family: 'Inter', sans-serif; }
+
+.text-hero {
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem); /* min, preferred, max */
+}
+
+    </style>
+</head>
+<body class="bg-black">
+
+    <div id="app-container" class="min-h-screen">
+        <!-- Navigation Component -->
+        <header class="bg-black/95 backdrop-blur-lg fixed top-0 w-full z-50 border-b border-yellow-500/30">
+          <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+              <div class="flex items-center gap-3 cursor-pointer" data-nav="home">
+                <img src="images/AIchemist02thumb_00.png" alt="aichemist.agency Logo" class="h-10 w-10 rounded-lg">
+                <span class="text-xl font-bold text-yellow-500">aichemist agentic SaaS | AI</span>
+              </div>
+
+              <ul class="hidden md:flex items-center gap-8">
+                <li><button data-nav="solutions" class="nav-link text-white hover:text-green-400 transition-colors">Solutions</button></li>
+                <li><button data-nav="process" class="nav-link text-white hover:text-green-400 transition-colors">Process</button></li>
+                <li><button data-nav="results" class="nav-link text-white hover:text-green-400 transition-colors">Results</button></li>
+              </ul>
+
+              <div class="flex items-center gap-4">
+                <button data-nav="contact" class="hidden md:block bg-gradient-to-r from-yellow-500 to-green-500 text-black px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all">Get Your Free Automation Audit</button>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-lg border-t border-yellow-500/30">
+              <div class="px-4 py-6 space-y-4">
+                <button data-nav="solutions" class="mobile-nav-link block w-full text-left text-white hover:text-green-400 py-2">Solutions</button>
+                <button data-nav="process" class="mobile-nav-link block w-full text-left text-white hover:text-green-400 py-2">Process</button>
+                <button data-nav="results" class="mobile-nav-link block w-full text-left text-white hover:text-green-400 py-2">Results</button>
+                <button data-nav="contact" class="mobile-nav-link block w-full bg-gradient-to-r from-yellow-500 to-green-500 text-black px-6 py-3 rounded-full font-semibold mt-4">Get Your Free Automation Audit</button>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main>
+          <!-- Home Page View -->
+          <section id="view-home" class="page-view bg-black text-white">
+            <div class="min-h-screen flex items-center relative overflow-hidden pt-20">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-yellow-500/10"></div>
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                  <div class="lg:pr-4">
+                    <div class="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.685a1 1 0 0 0-1.197 0l-3.586 2.685a.5.5 0 0 1-.81-.47L8.523 12.9a.5.5 0 0 1 .126-.37l-3.234-3.148a.5.5 0 0 1 .286-.852l8.248-.455a.5.5 0 0 1 .476.305l3.201 7.28a.5.5 0 0 1-.03.54Z"/><path d="M12 2v5"/></svg>
+                      <span>Enterprise-Class Automation. Built for Your Small Business.</span>
+                    </div>
+                    <h1 class="text-hero font-bold mb-6 leading-tight">Transform Your Manual Processes into <span class="bg-gradient-to-r from-yellow-500 to-green-500 bg-clip-text text-transparent">Automated Gold</span></h1>
+                    <p class="text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">We build intelligent, scalable automation systems that save you 100+ hours a month, cut operational costs, and give your team the freedom to innovate and scale.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 mb-8">
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">100+</div><div class="text-xs lg:text-sm text-green-400">Hours Saved Monthly</div></div>
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">20%</div><div class="text-xs lg:text-sm text-green-400">Reduction in Admin Costs</div></div>
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">3X</div><div class="text-xs lg:text-sm text-green-400">Faster Response Times</div></div>
+                      <div class="text-center p-3 lg:p-4 bg-white/5 rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"><div class="text-xl lg:text-2xl font-bold text-yellow-500">30</div><div class="text-xs lg:text-sm text-green-400">Day Implementation</div></div>
+                    </div>
+                    <button data-nav="contact" class="bg-gradient-to-r from-yellow-500 to-green-500 text-black px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold text-base lg:text-lg hover:shadow-xl transition-all flex items-center gap-2 mb-8 lg:mb-0">
+                      Get Your Free Automation Audit
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 lg:h-5 lg:w-5"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <div class="hidden lg:block mt-8 space-y-4">
+                      <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-1 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><h4 class="font-semibold text-white">Eliminate Repetitive Work</h4><p class="text-gray-400 text-sm">Free your team from the drudgery of data entry and administrative tasks.</p></div></div>
+                      <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-1 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><h4 class="font-semibold text-white">Accelerate Your Revenue Cycle</h4><p class="text-gray-400 text-sm">Automate invoicing, follow-ups, and lead routing to improve cash flow.</p></div></div>
+                      <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-1 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><h4 class="font-semibold text-white">Provide 24/7 Intelligence</h4><p class="text-gray-400 text-sm">Use AI to answer customer questions and qualify leads instantly, anytime.</p></div></div>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="bg-white/5 backdrop-blur-lg border border-yellow-500/20 rounded-2xl p-6 lg:p-8 lg:sticky lg:top-24 max-w-lg lg:max-w-none">
+                      <h3 class="text-xl lg:text-2xl font-bold text-yellow-500 mb-6 text-center">See The True Cost of Manual Work</h3>
+                      <div class="space-y-6">
+                        <div><label class="block text-green-400 font-medium mb-2 text-sm lg:text-base">Employees on Manual Tasks</label><input type="number" id="roi-sales-reps" value="3" class="w-full p-3 lg:p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none text-sm lg:text-base" placeholder="3"/></div>
+                        <div><label class="block text-green-400 font-medium mb-2 text-sm lg:text-base">Hours/Week Per Employee</label><input type="number" id="roi-close-rate" value="10" class="w-full p-3 lg:p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none text-sm lg:text-base" placeholder="10"/></div>
+                        <div><label class="block text-green-400 font-medium mb-2 text-sm lg:text-base">Average Hourly Cost ($)</label><input type="number" id="roi-monthly-revenue" value="40" class="w-full p-3 lg:p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none text-sm lg:text-base" placeholder="40"/></div>
+                        <div class="bg-gradient-to-r from-yellow-500 to-green-500 text-black p-4 lg:p-6 rounded-xl text-center"><div id="roi-result" class="text-2xl lg:text-3xl font-bold mb-2">$62,400</div><div class="font-semibold text-sm lg:text-base">Potential Annual Savings</div></div>
+                        <div class="text-center"><button data-nav="contact" class="bg-black/30 text-white border border-yellow-500/40 px-6 py-3 rounded-lg hover:bg-yellow-500/10 transition-all text-sm w-full">Get Your Custom Automation Roadmap</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="py-20 bg-gray-900">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Give Your Business an <span class="text-yellow-500">Alchemical Engine</span></h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:transform hover:-translate-y-2"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-black"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.685a1 1 0 0 0-1.197 0l-3.586 2.685a.5.5 0 0 1-.81-.47L8.523 12.9a.5.5 0 0 1 .126-.37l-3.234-3.148a.5.5 0 0 1 .286-.852l8.248-.455a.5.5 0 0 1 .476.305l3.201 7.28a.5.5 0 0 1-.03.54Z"/><path d="M12 2v5"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Enterprise Intelligence</h3><p class="text-gray-300">We deploy robust, scalable automation frameworks once reserved for large corporations, customized for the agility and budget of your small business.</p></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:transform hover:-translate-y-2"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-black"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Rapid Implementation</h3><p class="text-gray-300">Our 30-day foundational phase is designed for immediate impact. Start seeing process improvements and measurable ROI within your first month.</p></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:transform hover:-translate-y-2"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-black"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Custom-Built Solutions</h3><p class="text-gray-300">Your business is unique. We don't force you into a box. We build custom workflows and integrations that fit your exact needs and connect your existing tools.</p></div>
+                </div>
+              </div>
+            </section>
+            <section class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                  <div class="border-l-4 border-red-500 pl-8"><h3 class="text-3xl font-bold text-red-400 mb-6">Is Your Business Running You?</h3><p class="text-gray-300 text-lg leading-relaxed">Are you and your team buried in repetitive tasks? Chasing invoices, manually updating systems, and responding to the same questions over and over? This operational drag is the lead weight holding your business back from its true potential.</p></div>
+                  <div class="border-l-4 border-green-500 pl-8"><h3 class="text-3xl font-bold text-green-400 mb-6">Give Your Business an Alchemical Engine</h3><p class="text-gray-300 text-lg leading-relaxed">We build the intelligent core your business is missing. We analyze your unique processes and build custom automation and AI solutions that work silently in the background to transmute manual effort into profit and growth.</p></div>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <!-- Solutions Page View -->
+          <section id="view-solutions" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold mb-6">The Alchemy of Automation.<br><span class="text-yellow-500">The Formula for Growth.</span></h1><p class="text-xl text-gray-300 max-w-3xl mx-auto">Our services are designed to transform your core business functions into efficient, intelligent, and scalable systems.</p></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 20V10H8"/><path d="M12 10V4H8"/><path d="M20 12H4"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">Business Process Automation</h3><p class="text-gray-400 mb-6 flex-grow">Automate everything that slows you down. We target the repetitive, time-consuming tasks in finance, HR, and operations to free up your team for high-value work.</p><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Outcome:</strong> Drastically reduce administrative overhead and increase operational efficiency.</p></div>
+
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">Custom AI & Integrations</h3><p class="text-gray-400 mb-6 flex-grow">Your business is unique. Your software should be, too. We build the bridges between your systems and develop custom AI models to solve your most specific challenges.</p><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Outcome:</strong> Create a unified tech stack and a single source of truth for your data.</p></div>
+
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">Revenue & Growth Operations</h3><p class="text-gray-400 mb-6 flex-grow">We build the operational backbone for your growth engine, automating lead generation, enrichment, outreach, and customer service to ensure no opportunity is missed.</p><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Outcome:</strong> Fill your pipeline, shorten your sales cycle, and improve customer satisfaction.</p></div>
+
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20 flex flex-col"><div class="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="text-2xl font-bold text-yellow-500 mb-4">AI Strategy & Consulting</h3><p class="text-gray-400 mb-6 flex-grow">Adopting AI can be overwhelming. We act as your strategic technology partner, helping you navigate the landscape and build a clear, actionable roadmap for a competitive advantage.</p><p class="mt-auto bg-green-900/50 text-green-300 p-4 rounded-lg text-sm"><strong>Outcome:</strong> A long-term vision for automation with a focus on high-ROI initiatives first.</p></div>
+
+                </div>
+                <div class="bg-gradient-to-r from-yellow-500/10 to-green-500/10 rounded-2xl p-8 border border-yellow-500/30">
+                  <h2 class="text-3xl font-bold text-center text-yellow-500 mb-8">We Engineer Solutions to Integrate Seamlessly With the Tools You Trust</h2>
+                  <div class="text-center text-gray-300">
+                    <p>Google Workspace | Office365 | Slack | Monday.com | Asana | Hubspot | Salesforce.com | Pipedrive | Canva | Pandadocs | Zoom | Wordpress | Wix | Mailchimp | Semrush | Metricool | Airtable | Supabase | Pinecone | LangChain | LangGraph | Graphiti | Pydantic | n8n | Make.com | Flowise | ChatGPT | Gemini | Claude | Ollama | custom AI agents & chatbots and more</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Process Page View -->
+          <section id="view-process" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold mb-6">Our <span class="text-yellow-500">3-Phase</span> Formula for Transformation</h1><p class="text-xl text-gray-300 max-w-3xl mx-auto">A rapid, risk-mitigated deployment that delivers immediate impact and scales with your success.</p></div>
+                <div class="space-y-12">
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20"><div class="flex items-center gap-4 mb-6"><div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-xl flex items-center justify-center"><span class="text-2xl font-bold text-black">I</span></div><div><h3 class="text-2xl font-bold text-yellow-500">Phase I: Discover & Formulate (30 Days)</h3><p class="text-gray-400">Rapid Deployment, Immediate Impact</p></div></div><div class="grid md:grid-cols-2 gap-8"><div><h4 class="font-semibold text-white mb-4">Deliverables:</h4><ul class="space-y-2 text-gray-300"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Comprehensive Process Audit</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Custom Automation Blueprint & Roadmap</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Foundational Workflow Implementation (1-2 Core Processes)</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Basic Pipeline Management Dashboard</li></ul></div><div><h4 class="font-semibold text-white mb-4">Process Outcome:</h4><p class="text-green-400">Establish a clear vision and achieve your first "quick win" to validate ROI immediately.</p></div></div></div>
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20"><div class="flex items-center gap-4 mb-6"><div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center"><span class="text-2xl font-bold text-white">II</span></div><div><h3 class="text-2xl font-bold text-yellow-500">Phase II: Transmute & Accelerate (60-90 Days)</h3><p class="text-gray-400">Build, Integrate, and Scale What Works</p></div></div><div class="grid md:grid-cols-2 gap-8"><div><h4 class="font-semibold text-white mb-4">Deliverables:</h4><ul class="space-y-2 text-gray-300"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Full Build-out of 3-5 Core Automation Workflows</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Integration with Key Software (CRM, Accounting, etc.)</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Performance Optimization and A/B Testing</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Integrated Analytics and Reporting</li></ul></div><div><h4 class="font-semibold text-white mb-4">Process Outcome:</h4><p class="text-green-400">Your core business processes are now running on an intelligent, automated engine.</p></div></div></div>
+                  <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20"><div class="flex items-center gap-4 mb-6"><div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center"><span class="text-2xl font-bold text-white">III</span></div><div><h3 class="text-2xl font-bold text-yellow-500">Phase III: Refine & Scale (Ongoing)</h3><p class="text-gray-400">Continuous Improvement and Strategic Growth</p></div></div><div class="grid md:grid-cols-2 gap-8"><div><h4 class="font-semibold text-white mb-4">Deliverables:</h4><ul class="space-y-2 text-gray-300"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Ongoing Monitoring and Optimization</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Development of New Automation Workflows</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Advanced AI Model Training and Deployment</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Team Training and Documentation</li></ul></div><div><h4 class="font-semibold text-white mb-4">Process Outcome:</h4><p class="text-green-400">A fully operational, self-improving automation ecosystem that becomes a core competitive advantage.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Results Page View -->
+          <section id="view-results" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold mb-6"><span class="text-yellow-500">Proven Results</span> & Client Transformations</h1><p class="text-xl text-gray-300 max-w-3xl mx-auto">Real-world examples of how we transmute manual processes into measurable business growth.</p></div>
+                <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20"><div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Professional Services Firm</h3><p class="text-gray-300 mb-4">A consulting firm automated their client intake and proposal generation process.</p><div class="space-y-2"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>375% increase</strong> in qualified leads processed</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>50% reduction</strong> in proposal creation time</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>$84,000+ saved</strong> in annual administrative costs</span></div></div></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20"><div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">SaaS Company</h3><p class="text-gray-300 mb-4">A growing SaaS business automated their customer onboarding and support systems.</p><div class="space-y-2"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>30% reduction</strong> in customer support costs</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>28% of IT tickets</strong> resolved automatically</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">Improved customer retention by <strong>15%</strong></span></div></div></div>
+                  <div class="bg-white/5 p-8 rounded-2xl border border-yellow-500/20"><div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h3 class="text-xl font-bold text-yellow-500 mb-4">Marketing Agency Partner</h3><p class="text-gray-300 mb-4">Partnered with a creative agency to offer white-labeled automation services.</p><div class="space-y-2"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm"><strong>300% increase</strong> in ROI on ad spend for their clients</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">Added a new <strong>high-margin recurring revenue</strong> stream</span></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300 text-sm">Increased client retention and lifetime value</span></div></div></div>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-8 border border-yellow-500/20">
+                  <h2 class="text-3xl font-bold text-center text-yellow-500 mb-8">Success Indicators</h2>
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div><h3 class="text-xl font-bold text-green-400 mb-4">Process Achievements</h3><ul class="space-y-3"><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Automated systems replacing manual workflows</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Systematic lead nurturing preventing follow-up gaps</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Enhanced pipeline visibility and organization</span></li></ul></div>
+                    <div><h3 class="text-xl font-bold text-blue-400 mb-4">Business Impact</h3><ul class="space-y-3"><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Measurable time savings in repetitive tasks</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Improved sales process standardization</span></li><li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-400 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-gray-300">Scalable growth without proportional overhead increase</span></li></ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Page View -->
+          <section id="view-contact" class="page-view hidden bg-black text-white pt-20">
+            <div class="py-20">
+              <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12"><h1 class="text-5xl font-bold mb-6">Get Your Free <span class="text-yellow-500">Automation Audit</span></h1><p class="text-xl text-gray-300">Discover your top 3 opportunities for immediate ROI. No pressure, just a clear, actionable plan.</p></div>
+                <div class="bg-white/5 backdrop-blur-lg border border-yellow-500/20 rounded-2xl p-8">
+<!-- The form in your #view-contact section -->
+<form id="contact-form" class="space-y-6">
+    <!-- All your input fields with 'name' attributes remain the same -->
+    <div class="grid md:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-green-400 font-medium mb-2">Your Name</label>
+            <input type="text" name="name" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none" required/>
+        </div>
+        <div>
+            <label class="block text-green-400 font-medium mb-2">Email Address</label>
+            <input type="email" name="email" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none" required/>
+        </div>
+    </div>
+    <div>
+        <label class="block text-green-400 font-medium mb-2">Company Name</label>
+        <input type="text" name="company" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none" required/>
+    </div>
+    <div>
+        <label class="block text-green-400 font-medium mb-2">What's Your Biggest Operational Bottleneck?</label>
+        <div class="relative">
+        <select name="challenge" class="w-full p-4 bg-black/50 border border-gray-600 rounded-lg text-white focus:border-yellow-500 focus:outline-none appearance-none" required>
+            <option value="">Choose your biggest challenge...</option>
+            <option value="Too many manual, repetitive tasks">Too many manual, repetitive tasks</option>
+            <option value="Inconsistent lead generation & follow-up">Inconsistent lead generation & follow-up</option>
+            <option value="Disconnected software & data silos">Disconnected software & data silos</option>
+            <option value="Slow customer response times">Slow customer response times</option>
+            <option value="Difficulty scaling without hiring more people">Difficulty scaling without hiring more people</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+    </div>
+    <button type="submit" class="w-full bg-gradient-to-r from-yellow-500 to-green-500 text-black py-4 px-8 rounded-xl font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+        Get My Free Audit
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+    <!-- Add a div for status messages -->
+    <div id="form-status" class="text-center mt-4"></div>
+</form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer Component -->
+        <footer class="bg-gray-900 text-white py-12 border-t border-yellow-500/20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <img src="images/AIchemist02thumb_00.png" alt="aichemist.agency Logo" class="h-8 w-8 rounded-lg">
+                  <span class="text-xl font-bold text-yellow-500">aichemist.agency<br>agentic SaaS | AI</span>
+                </div>
+                <p class="text-gray-400 text-sm">Enterprise-Class Automation. Built for Your Small Business. We transmute manual processes into profit and growth.</p>
+              </div>
+              <div><h5 class="font-semibold mb-4">Solutions</h5><ul class="space-y-2 text-sm text-gray-400"><li><button data-nav="solutions" class="hover:text-white transition-colors">Business Process Automation</button></li><li><button data-nav="solutions" class="hover:text-white transition-colors">Custom AI & Integrations</button></li><li><button data-nav="solutions" class="hover:text-white transition-colors">Revenue & Growth Operations</button></li><li><button data-nav="solutions" class="hover:text-white transition-colors">AI Strategy & Consulting</button></li></ul></div>
+              <div><h5 class="font-semibold mb-4">Company</h5><ul class="space-y-2 text-sm text-gray-400"><li><button data-nav="process" class="hover:text-white transition-colors">Our Process</button></li><li><button data-nav="results" class="hover:text-white transition-colors">Results</button></li><li><a href="#" class="hover:text-white transition-colors">About Us</a></li><li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li></ul></div>
+<!-- START OF UPDATED CODE (FOOTER CONTACT BLOCK) -->
+<div>
+    <h5 class="font-semibold mb-4">Contact</h5>
+    <ul class="space-y-2 text-sm text-gray-400">
+        <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:info@aichemist.agency" class="hover:text-white transition-colors">info@aichemist.agency</a>
+        </li>
+        <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+16786325132" class="hover:text-white transition-colors">+1 678-632-5132</a>
+        </li>
+    </ul>
+</div>
+<!-- END OF UPDATED CODE (FOOTER CONTACT BLOCK) -->
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400"><p>© 2025 aichemist.agency. All rights reserved. | The Alchemy of Automation. The Formula for Growth.</p></div>
+          </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- STATE MANAGEMENT ---
+            let currentView = 'home';
+            let mobileMenuOpen = false;
+
+            // --- DOM ELEMENT REFERENCES ---
+            const pageViews = document.querySelectorAll('.page-view');
+            const navLinks = document.querySelectorAll('[data-nav]');
+            const desktopNavLinks = document.querySelectorAll('.nav-link');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            // ROI Calculator elements
+            const roiHourlyCostInput = document.getElementById('roi-monthly-revenue');
+            const roiEmployeesInput = document.getElementById('roi-sales-reps');
+            const roiHoursInput = document.getElementById('roi-close-rate');
+            const roiResult = document.getElementById('roi-result');
+
+
+            // --- FUNCTIONS ---
+
+            // Function to switch between "pages"
+            const setCurrentView = (viewName) => {
+                currentView = viewName;
+                pageViews.forEach(view => view.classList.add('hidden'));
+                const activeView = document.getElementById(`view-${viewName}`);
+                if (activeView) {
+                    activeView.classList.remove('hidden');
+                }
+                desktopNavLinks.forEach(link => {
+                    if (link.dataset.nav === viewName) {
+                        link.classList.add('text-green-400');
+                        link.classList.remove('text-white');
+                    } else {
+                        link.classList.add('text-white');
+                        link.classList.remove('text-green-400');
+                    }
+                });
+                if (mobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+                window.scrollTo(0, 0);
+            };
+
+            // Function to toggle the mobile menu
+            const toggleMobileMenu = () => {
+                mobileMenuOpen = !mobileMenuOpen;
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            };
+
+            // Function to calculate and display ROI
+            const calculateROI = () => {
+                const hourlyCost = parseInt(roiHourlyCostInput.value) || 0;
+                const employees = parseInt(roiEmployeesInput.value) || 0;
+                const hoursPerWeek = parseInt(roiHoursInput.value) || 0;
+
+                const weeklySavings = employees * hoursPerWeek * hourlyCost;
+                const annualSavings = weeklySavings * 52;
+
+                roiResult.textContent = `$${annualSavings.toLocaleString()}`;
+            };
+
+
+            // Function to handle contact form submission
+// Find this line in your script:
+
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Stop the default browser submission
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.innerHTML = 'Sending...';
+    submitButton.disabled = true;
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch('send-audit-request.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            formStatus.textContent = "Success! Your audit request has been sent. We'll be in touch soon.";
+            formStatus.className = 'text-center mt-4 text-green-400';
+            contactForm.reset();
+        } else {
+            const errorResult = await response.json();
+            throw new Error(errorResult.message || 'An unknown error occurred.');
+        }
+    } catch (error) {
+        formStatus.textContent = `Error: ${error.message}`;
+        formStatus.className = 'text-center mt-4 text-red-400';
+    } finally {
+        submitButton.innerHTML = originalButtonText;
+        submitButton.disabled = false;
+    }
+});
+
+            // --- EVENT LISTENERS ---
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    setCurrentView(link.dataset.nav);
+                });
+            });
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            roiHourlyCostInput.addEventListener('input', calculateROI);
+            roiEmployeesInput.addEventListener('input', calculateROI);
+            roiHoursInput.addEventListener('input', calculateROI);
+
+            // --- INITIALIZATION ---
+            setCurrentView('home');
+            calculateROI();
+        });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+# AIchemist Agency - Deployment Exclusion List
+# Files and directories to exclude when deploying to production (Hostinger)
+
+# CRITICAL: Development-only handlers
+send-audit-request-dev.php
+send-audit-request-enhanced.php
+
+# Development configuration
+config-local.php
+.env.local
+.env.development
+
+# Development logs and temporary data
+logs/
+audit-requests.log
+audit-requests-readable.txt
+*.log
+error_log
+php_errors.log
+
+# Backup system (keep backups local for safety)
+_backups/
+backup_*/
+*.backup
+*.bak
+
+# Development and testing files
+*-dev.html
+*-dev.php
+*-dev.js
+*-dev.css
+test-*
+testing/
+dev/
+
+# Documentation (optional - some may be useful in production)
+docs/AUTDF-*.md
+docs/DEVELOPMENT-*.md
+docs/FRONTEND-ASSESSMENT-*.md
+*-DEVELOPMENT.md
+README-DEV.md
+
+# Scripts (development/deployment automation)
+scripts/create-backup.sh
+scripts/restore-backup.sh
+scripts/deploy-*.sh
+scripts/autdf-*.sh
+scripts/*-dev.*
+deploy-*.sh
+
+# Temporary files
+temp/
+tmp/
+cache/
+*.tmp
+*.temp
+*.cache
+
+# IDE and development environment
+.vscode/
+.idea/
+*.sublime-*
+.project
+.settings/
+*.swp
+*.swo
+
+# System and OS files
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+desktop.ini
+
+# Version control (if not using git in production)
+.git/
+.gitignore
+.gitattributes
+
+# Node.js development dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+
+# Package manager lock files (optional, depends on deployment strategy)
+package-lock.json
+yarn.lock
+composer.lock
+
+# Build artifacts that should be regenerated
+dist/
+build/
+compiled/
+
+# Development database files
+*.sqlite
+*.sqlite3
+*.db.local
+database.local.*
+
+# Environment-specific files
+.env.example
+local.config.*
+development.config.*
+
+# Testing and quality assurance
+tests/
+test_results/
+coverage/
+.nyc_output/
+phpunit.xml.local
+jest.config.local.js
+
+# Miscellaneous development files
+TODO.md
+CHANGELOG-DEV.md
+NOTES.md
+*.draft
+*.wip

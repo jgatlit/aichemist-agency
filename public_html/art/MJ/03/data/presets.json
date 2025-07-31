@@ -1,0 +1,240 @@
+[
+    {
+        "deviceName": "My Device",
+        "presetName": "LOAD ME!",
+        "config": {
+            "chatflowid": "a84f1097-a4cf-4054-9e6b-f092039e0dab",
+            "apiHost": "https:\/\/flowise-zx6n.onrender.com",
+            "theme": {
+                "button": {
+                    "backgroundColor": "#FFFFFF",
+                    "iconColor": "#000000",
+                    "customIconSrc": "https:\/\/raw.githubusercontent.com\/walkxcode\/dashboard-icons\/main\/svg\/google-messages.svg",
+                    "size": 48,
+                    "dragAndDrop": true,
+                    "right": 20,
+                    "bottom": 20,
+                    "autoWindowOpen": {
+                        "autoOpen": true,
+                        "openDelay": 2,
+                        "autoOpenOnMobile": false
+                    }
+                },
+                "tooltip": {
+                    "tooltipBackgroundColor": "rgba(0, 71, 186, 0.05)",
+                    "tooltipTextColor": "#FFFFFF",
+                    "showTooltip": true,
+                    "tooltipMessage": "Hi There ??!",
+                    "tooltipFontSize": 16
+                },
+                "disclaimer": {
+                    "title": "Disclaimer",
+                    "message": "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https:\/\/flowiseai.com\/terms\">Terms & Condition<\/a>",
+                    "textColor": "#FFFFFF",
+                    "buttonColor": "#FFFFFF",
+                    "buttonText": "Start Chatting",
+                    "buttonTextColor": "#000000",
+                    "blurredBackgroundColor": "rgba(0, 71, 186, 0.05, 0.5)",
+                    "backgroundColor": "rgba(0, 71, 186, 0.05)"
+                },
+                "customCSS": "\n                    .flowise-chat-window--header {\n                        background-color: rgba(0, 71, 186, 0.05) !important;\n                    }\n                    .flowise-chat-window--header .flowise-chat-window--title {\n                        color: #FFFFFF !important;\n                    }\n                ",
+                "chatWindow": {
+                    "botMessage": {
+                        "backgroundColor": "#f7f8ff",
+                        "textColor": "#0047BA",
+                        "showAvatar": true,
+                        "avatarSrc": "https:\/\/aichemist.agency\/art\/MJ\/1\/images\/mojo_mentor_avatar01.png"
+                    },
+                    "userMessage": {
+                        "backgroundColor": "#3B81F6",
+                        "textColor": "#FFFFFF",
+                        "showAvatar": true,
+                        "avatarSrc": "https:\/\/aichemist.agency\/art\/MJ\/1\/images\/mojo_mentor_avatar02.png"
+                    },
+                    "textInput": {
+                        "placeholder": "Type your question",
+                        "backgroundColor": "rgba(0, 71, 186, 0.05)",
+                        "textColor": "rgba(0, 0, 0, 0.5)",
+                        "sendButtonColor": "#FFFFFF",
+                        "maxChars": 50,
+                        "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 50 characters.",
+                        "autoFocus": true,
+                        "sendMessageSound": false,
+                        "sendSoundLocation": "send_message.mp3",
+                        "receiveMessageSound": false,
+                        "receiveSoundLocation": "receive_message.mp3"
+                    },
+                    "feedback": {
+                        "color": "#FFFFFF"
+                    },
+                    "dateTimeToggle": {
+                        "date": true,
+                        "time": true
+                    },
+                    "footer": {
+                        "textColor": "#FFFFFF",
+                        "text": "Powered by MOJOhealth +",
+                        "company": "aichemist",
+                        "companyLink": "http:\/\/aichemist.agency"
+                    },
+                    "title": "Mo chatbot (public)",
+                    "welcomeMessage": "Hello! This is a custom welcome message",
+                    "backgroundColor": "rgba(0, 71, 186, 0.05)",
+                    "height": 700,
+                    "width": 400,
+                    "showTitle": true,
+                    "showAgentMessages": false,
+                    "titleAvatarSrc": "https:\/\/raw.githubusercontent.com\/walkxcode\/dashboard-icons\/main\/svg\/google-messages.svg",
+                    "errorMessage": "This is a custom error message",
+                    "backgroundImage": "",
+                    "fontSize": 16,
+                    "starterPrompts": [
+                        "Where should we begin?",
+                        "What can we learn together?"
+                    ],
+                    "starterPromptFontSize": 15,
+                    "clearChatOnReload": false,
+                    "sourceDocsTitle": "Sources:",
+                    "renderHTML": true
+                }
+            },
+            "cssUrl": "https:\/\/mojohealthmentor.com\/styles.css",
+            "availableThemeColors": [
+                "#0047BA",
+                "#28BCB4",
+                "#E31D93",
+                "#FFC600",
+                "#0D81AA",
+                "#9E218F",
+                "#FAFAFA",
+                "#757575",
+                "#BABABA",
+                "#000000",
+                "rgba(0, 0, 0, 0.05)",
+                "rgba(0, 0, 0, 0.1)",
+                "rgba(255, 255, 255, 0.95)",
+                "rgba(0, 71, 186, 0.1)",
+                "rgba(0, 71, 186, 0.3)",
+                "rgba(0, 71, 186, 0.05)",
+                "rgba(40, 188, 180, 0.05)",
+                "rgba(227, 29, 147, 0.05)",
+                "rgba(227, 29, 147, 0.3)",
+                "rgba(255, 198, 0, 0.1)",
+                "rgba(227, 29, 147, 0.1)",
+                "rgba(158, 33, 143, 0.05)",
+                "rgba(158, 33, 143, 0.3)",
+                "rgba(40, 188, 180, 0.1)",
+                "rgba(255, 198, 0, 0.3)",
+                "rgba(255, 255, 255, 0.1)",
+                "rgba(0, 0, 0, 0.5)",
+                "rgba(255, 255, 255, 0.8)"
+            ]
+        },
+        "hidden": false,
+        "timestamp": 1752901404
+    },
+    {
+        "deviceName": "My Device",
+        "presetName": "Katy 7.20.25",
+        "config": {
+            "chatflowid": "a84f1097-a4cf-4054-9e6b-f092039e0dab",
+            "apiHost": "https:\/\/flowise-zx6n.onrender.com",
+            "theme": {
+                "button": {
+                    "backgroundColor": "#28BCB4",
+                    "iconColor": "#FFFFFF",
+                    "customIconSrc": "https:\/\/raw.githubusercontent.com\/walkxcode\/dashboard-icons\/main\/svg\/google-messages.svg",
+                    "size": 48,
+                    "dragAndDrop": true,
+                    "right": 20,
+                    "bottom": 20,
+                    "autoWindowOpen": {
+                        "autoOpen": true,
+                        "openDelay": 2,
+                        "autoOpenOnMobile": false
+                    }
+                },
+                "tooltip": {
+                    "tooltipBackgroundColor": "#000000",
+                    "tooltipTextColor": "#FFFFFF",
+                    "showTooltip": true,
+                    "tooltipMessage": "Hi There ??!",
+                    "tooltipFontSize": 16
+                },
+                "disclaimer": {
+                    "title": "Disclaimer",
+                    "message": "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https:\/\/flowiseai.com\/terms\">Terms & Condition<\/a>",
+                    "textColor": "#000000",
+                    "buttonColor": "#3b82f6",
+                    "buttonText": "Start Chatting",
+                    "buttonTextColor": "#FFFFFF",
+                    "blurredBackgroundColor": "#666666",
+                    "backgroundColor": "#FFFFFF"
+                },
+                "customCSS": "",
+                "chatWindow": {
+                    "botMessage": {
+                        "backgroundColor": "#f7f8ff",
+                        "textColor": "#303235",
+                        "showAvatar": true,
+                        "avatarSrc": "https:\/\/aichemist.agency\/art\/MJ\/1\/images\/mojo_mentor_avatar01.png"
+                    },
+                    "userMessage": {
+                        "backgroundColor": "#3B81F6",
+                        "textColor": "#FFFFFF",
+                        "showAvatar": true,
+                        "avatarSrc": "https:\/\/aichemist.agency\/art\/MJ\/1\/images\/mojo_mentor_avatar02.png"
+                    },
+                    "textInput": {
+                        "placeholder": "Type your question",
+                        "backgroundColor": "#FFFFFF",
+                        "textColor": "#303235",
+                        "sendButtonColor": "#3B81F6",
+                        "maxChars": 50,
+                        "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 50 characters.",
+                        "autoFocus": true,
+                        "sendMessageSound": "",
+                        "sendSoundLocation": "send_message.mp3",
+                        "receiveMessageSound": "",
+                        "receiveSoundLocation": "receive_message.mp3"
+                    },
+                    "feedback": {
+                        "color": "#303235"
+                    },
+                    "dateTimeToggle": {
+                        "date": true,
+                        "time": true
+                    },
+                    "footer": {
+                        "textColor": "#303235",
+                        "text": "Powered by MOJOhealth +",
+                        "company": "aichemist",
+                        "companyLink": "http:\/\/aichemist.agency"
+                    },
+                    "title": "Mo chatbot (public)",
+                    "welcomeMessage": "Hello! I'm MO, your guide for finding MOre JOy on your healing journey",
+                    "backgroundColor": "#bababa",
+                    "height": 700,
+                    "width": 400,
+                    "showTitle": true,
+                    "showAgentMessages": false,
+                    "titleAvatarSrc": "https:\/\/raw.githubusercontent.com\/walkxcode\/dashboard-icons\/main\/svg\/google-messages.svg",
+                    "errorMessage": "This is a custom error message",
+                    "backgroundImage": "",
+                    "fontSize": 16,
+                    "starterPrompts": [
+                        "Where should we begin?",
+                        "What can we learn together?"
+                    ],
+                    "starterPromptFontSize": 15,
+                    "clearChatOnReload": false,
+                    "sourceDocsTitle": "Sources:",
+                    "renderHTML": true
+                }
+            },
+            "cssUrl": "https:\/\/mojohealthmentor.com\/styles.css"
+        },
+        "hidden": false,
+        "timestamp": 1753027249
+    }
+]

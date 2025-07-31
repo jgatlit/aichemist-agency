@@ -1,0 +1,83 @@
+# AIchemist Agency - Development Files to Exclude from Production Deployment
+
+# Development-only PHP handlers
+send-audit-request-dev.php
+*-dev.php
+
+# Local development configuration
+config-local.php
+.env.local
+
+# Development logs and data
+logs/
+*.log
+
+# Development testing files
+test-*.html
+test-*.php
+test-*.js
+
+# Backup files (should stay local for safety)
+_backups/
+*.backup
+*.bak
+*~
+
+# Development scripts (optional - some may be useful in production)
+scripts/create-backup.sh
+scripts/restore-backup.sh
+scripts/autdf-*.sh
+scripts/*-dev.*
+
+# Development documentation (optional)
+docs/AUTDF-*.md
+docs/DEVELOPMENT-*.md
+*-DEVELOPMENT.md
+
+# Temporary development files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+.project
+.settings/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node.js (development tools only)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git files (if not using git on production)
+.git/
+.gitignore
+
+# Development environment indicators
+index-dev.html
+*-local.*
+
+# Cache and compiled files that should be regenerated
+cache/
+.cache/
+dist/
+build/
+
+# Development database files
+*.sqlite
+*.db.local
+
+# Package manager files (if not needed in production)
+package-lock.json
+yarn.lock
+composer.lock

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Mo - chatbot showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mo (public) chatbot - MOJOhealth.org<br>chat customization studio</h1>
+        <p>Explore different chatbot configurations</p>
+    </header>
+    <main>
+        <div id="config-panel">
+            <h2>Configuration <button id="toggle-all-sections">Collapse/Expand All</button> <button id="save-preset">Save as Preset</button></h2>
+			<p>Start with theme from any CSS<br>or adjust colors manually</p>
+
+            <div class="config-section">
+                <h3>Theme from CSS</h3>
+                <div class="config-content">
+                    <label for="css-url">CSS URL</label>
+                    <input type="text" id="css-url" data-path="cssUrl" value="https://mojohealthmentor.com/styles.css">
+                    <button id="fetch-theme">Fetch Theme</button>
+                    <p id="theme-status"></p>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Button</h3>
+                <div class="config-content collapsed">
+                    <label for="button-backgroundColor">Background Color <span class="color-display-tile" id="button-backgroundColor-display"></span></label>
+                    <input type="text" id="button-backgroundColor" data-path="theme.button.backgroundColor" value="#3B81F6">
+                    <input type="color" id="button-backgroundColor-picker" style="display: none;">
+                    <div id="button-backgroundColor-palette" class="color-palette"></div>
+
+                    <label for="button-iconColor">Icon Color <span class="color-display-tile" id="button-iconColor-display"></span></label>
+                    <input type="text" id="button-iconColor" data-path="theme.button.iconColor" value="#FFFFFF">
+                    <input type="color" id="button-iconColor-picker" style="display: none;">
+                    <div id="button-iconColor-palette" class="color-palette"></div>
+
+                    <label for="button-customIconSrc">Custom Icon URL</label>
+                    <input type="text" id="button-customIconSrc" data-path="theme.button.customIconSrc" value="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg">
+
+                    <label for="button-size">Size</label>
+                    <input type="range" id="button-size" data-path="theme.button.size" min="30" max="100" value="48">
+
+                    <label for="button-dragAndDrop">Drag and Drop</label>
+                    <input type="checkbox" id="button-dragAndDrop" data-path="theme.button.dragAndDrop" checked>
+
+                    <label for="button-right">Right Position</label>
+                    <input type="range" id="button-right" data-path="theme.button.right" min="0" max="100" value="20">
+
+                    <label for="button-bottom">Bottom Position</label>
+                    <input type="range" id="button-bottom" data-path="theme.button.bottom" min="0" max="100" value="20">
+
+                    <label for="button-autoOpen">Auto Open</label>
+                    <input type="checkbox" id="button-autoOpen" data-path="theme.button.autoWindowOpen.autoOpen" checked>
+
+                    <label for="button-openDelay">Open Delay (seconds)</label>
+                    <input type="number" id="button-openDelay" data-path="theme.button.autoWindowOpen.openDelay" min="0" step="1" value="2">
+
+                    <label for="button-autoOpenOnMobile">Auto Open on Mobile</label>
+                    <input type="checkbox" id="button-autoOpenOnMobile" data-path="theme.button.autoWindowOpen.autoOpenOnMobile">
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Tooltip</h3>
+                <div class="config-content collapsed">
+                    <label for="tooltip-backgroundColor">Background Color <span class="color-display-tile" id="tooltip-backgroundColor-display"></span></label>
+                    <input type="text" id="tooltip-backgroundColor" data-path="theme.tooltip.tooltipBackgroundColor" value="#000000">
+                    <input type="color" id="tooltip-backgroundColor-picker" style="display: none;">
+                    <div id="tooltip-backgroundColor-palette" class="color-palette"></div>
+
+                    <label for="tooltip-textColor">Text Color <span class="color-display-tile" id="tooltip-textColor-display"></span></label>
+                    <input type="text" id="tooltip-textColor" data-path="theme.tooltip.tooltipTextColor" value="#FFFFFF">
+                    <input type="color" id="tooltip-textColor-picker" style="display: none;">
+                    <div id="tooltip-textColor-palette" class="color-palette"></div>
+
+                    <label for="tooltip-showTooltip">Show Tooltip</label>
+                    <input type="checkbox" id="tooltip-showTooltip" data-path="theme.tooltip.showTooltip" checked>
+
+                    <label for="tooltip-tooltipMessage">Tooltip Message</label>
+                    <input type="text" id="tooltip-tooltipMessage" data-path="theme.tooltip.tooltipMessage" value="Hi There ??!">
+
+                    <label for="tooltip-tooltipFontSize">Tooltip Font Size</label>
+                    <input type="range" id="tooltip-tooltipFontSize" data-path="theme.tooltip.tooltipFontSize" min="10" max="20" value="16">
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Chat Window</h3>
+                <div class="config-content">
+                    <label for="chatWindow-title">Title</label>
+                    <input type="text" id="chatWindow-title" data-path="theme.chatWindow.title" value="Mo chatbot (public)">
+
+                    <label for="chatWindow-welcomeMessage">Welcome Message</label>
+                    <input type="text" id="chatWindow-welcomeMessage" data-path="theme.chatWindow.welcomeMessage" value="Hello! This is a custom welcome message">
+
+                    <label for="chatWindow-backgroundColor">Background Color <span class="color-display-tile" id="chatWindow-backgroundColor-display"></span></label>
+                    <input type="text" id="chatWindow-backgroundColor" data-path="theme.chatWindow.backgroundColor" value="#FFFFFF">
+                    <input type="color" id="chatWindow-backgroundColor-picker" style="display: none;">
+                    <div id="chatWindow-backgroundColor-palette" class="color-palette"></div>
+
+                    <label for="chatWindow-height">Height</label>
+                    <input type="range" id="chatWindow-height" data-path="theme.chatWindow.height" min="300" max="1000" value="700">
+
+                    <label for="chatWindow-width">Width</label>
+                    <input type="range" id="chatWindow-width" data-path="theme.chatWindow.width" min="200" max="600" value="400">
+
+                    <label for="chatWindow-showTitle">Show Title</label>
+                    <input type="checkbox" id="chatWindow-showTitle" data-path="theme.chatWindow.showTitle" checked>
+
+                    <input type="hidden" id="chatWindow-showAgentMessages" data-path="theme.chatWindow.showAgentMessages" value="false">
+
+                    <label for="chatWindow-titleAvatarSrc">Title Avatar URL</label>
+                    <input type="text" id="chatWindow-titleAvatarSrc" data-path="theme.chatWindow.titleAvatarSrc" value="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg">
+
+                    <label for="chatWindow-errorMessage">Error Message</label>
+                    <input type="text" id="chatWindow-errorMessage" data-path="theme.chatWindow.errorMessage" value="This is a custom error message">
+
+                    <label for="chatWindow-backgroundImage">Background Image URL</label>
+                    <input type="text" id="chatWindow-backgroundImage" data-path="theme.chatWindow.backgroundImage">
+
+                    <label for="chatWindow-fontSize">Font Size</label>
+                    <input type="range" id="chatWindow-fontSize" data-path="theme.chatWindow.fontSize" min="10" max="20" value="16">
+
+                    <label for="chatWindow-starterPrompts">Starter Prompts (comma-separated)</label>
+                    <input type="text" id="chatWindow-starterPrompts" data-path="theme.chatWindow.starterPrompts" value="Where should we begin?,What can we learn together?">
+
+                    <label for="chatWindow-starterPromptFontSize">Starter Prompt Font Size</label>
+                    <input type="range" id="chatWindow-starterPromptFontSize" data-path="theme.chatWindow.starterPromptFontSize" min="10" max="20" value="15">
+
+                    <label for="chatWindow-clearChatOnReload">Clear Chat on Reload</label>
+                    <input type="checkbox" id="chatWindow-clearChatOnReload" data-path="theme.chatWindow.clearChatOnReload">
+
+                    <label for="chatWindow-sourceDocsTitle">Source Docs Title</label>
+                    <input type="text" id="chatWindow-sourceDocsTitle" data-path="theme.chatWindow.sourceDocsTitle" value="Sources:">
+
+                    <label for="chatWindow-renderHTML">Render HTML</label>
+                    <input type="checkbox" id="chatWindow-renderHTML" data-path="theme.chatWindow.renderHTML" checked>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Bot Message</h3>
+                <div class="config-content collapsed">
+                    <label for="botMessage-backgroundColor">Background Color <span class="color-display-tile" id="botMessage-backgroundColor-display"></span></label>
+                    <input type="text" id="botMessage-backgroundColor" data-path="theme.chatWindow.botMessage.backgroundColor" value="#f7f8ff">
+                    <input type="color" id="botMessage-backgroundColor-picker" style="display: none;">
+                    <div id="botMessage-backgroundColor-palette" class="color-palette"></div>
+
+                    <label for="botMessage-textColor">Text Color <span class="color-display-tile" id="botMessage-textColor-display"></span></label>
+                    <input type="text" id="botMessage-textColor" data-path="theme.chatWindow.botMessage.textColor" value="#303235">
+                    <input type="color" id="botMessage-textColor-picker" style="display: none;">
+                    <div id="botMessage-textColor-palette" class="color-palette"></div>
+
+                    <label for="botMessage-showAvatar">Show Avatar</label>
+                    <input type="checkbox" id="botMessage-showAvatar" data-path="theme.chatWindow.botMessage.showAvatar" checked>
+
+                    <label for="botMessage-avatarSrc">Avatar URL</label>
+                    <input type="text" id="botMessage-avatarSrc" data-path="theme.chatWindow.botMessage.avatarSrc" value="https://aichemist.agency/art/MJ/1/images/mojo_mentor_avatar01.png">
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>User Message</h3>
+                <div class="config-content collapsed">
+                    <label for="userMessage-backgroundColor">Background Color <span class="color-display-tile" id="userMessage-backgroundColor-display"></span></label>
+                    <input type="text" id="userMessage-backgroundColor" data-path="theme.chatWindow.userMessage.backgroundColor" value="#3B81F6">
+                    <input type="color" id="userMessage-backgroundColor-picker" style="display: none;">
+                    <div id="userMessage-backgroundColor-palette" class="color-palette"></div>
+
+                    <label for="userMessage-textColor">Text Color <span class="color-display-tile" id="userMessage-textColor-display"></span></label>
+                    <input type="text" id="userMessage-textColor" data-path="theme.chatWindow.userMessage.textColor" value="#FFFFFF">
+                    <input type="color" id="userMessage-textColor-picker" style="display: none;">
+                    <div id="userMessage-textColor-palette" class="color-palette"></div>
+
+                    <label for="userMessage-showAvatar">Show Avatar</label>
+                    <input type="checkbox" id="userMessage-showAvatar" data-path="theme.chatWindow.userMessage.showAvatar" checked>
+
+                    <label for="userMessage-avatarSrc">Avatar URL</label>
+                    <input type="text" id="userMessage-avatarSrc" data-path="theme.chatWindow.userMessage.avatarSrc" value="https://aichemist.agency/art/MJ/1/images/mojo_mentor_avatar02.png">
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Text Input</h3>
+                <div class="config-content collapsed">
+                    <label for="textInput-placeholder">Placeholder</label>
+                    <input type="text" id="textInput-placeholder" data-path="theme.chatWindow.textInput.placeholder" value="Type your question">
+
+                    <label for="textInput-backgroundColor">Background Color <span class="color-display-tile" id="textInput-backgroundColor-display"></span></label>
+                    <input type="text" id="textInput-backgroundColor" data-path="theme.chatWindow.textInput.backgroundColor" value="#FFFFFF">
+                    <input type="color" id="textInput-backgroundColor-picker" style="display: none;">
+                    <div id="textInput-backgroundColor-palette" class="color-palette"></div>
+
+                    <label for="textInput-textColor">Text Color <span class="color-display-tile" id="textInput-textColor-display"></span></label>
+                    <input type="text" id="textInput-textColor" data-path="theme.chatWindow.textInput.textColor" value="#303235">
+                    <input type="color" id="textInput-textColor-picker" style="display: none;">
+                    <div id="textInput-textColor-palette" class="color-palette"></div>
+
+                    <label for="textInput-sendButtonColor">Send Button Color <span class="color-display-tile" id="textInput-sendButtonColor-display"></span></label>
+                    <input type="text" id="textInput-sendButtonColor" data-path="theme.chatWindow.textInput.sendButtonColor" value="#3B81F6">
+                    <input type="color" id="textInput-sendButtonColor-picker" style="display: none;">
+                    <div id="textInput-sendButtonColor-palette" class="color-palette"></div>
+
+                    <label for="textInput-maxCharsWarningMessage">Max Chars Warning Message</label>
+                    <input type="text" id="textInput-maxCharsWarningMessage" data-path="theme.chatWindow.textInput.maxCharsWarningMessage" value="You exceeded the characters limit. Please input less than 50 characters.">
+
+                    <label for="textInput-autoFocus">Auto Focus</label>
+                    <input type="checkbox" id="textInput-autoFocus" data-path="theme.chatWindow.textInput.autoFocus" checked>
+
+                    <input type="hidden" id="textInput-sendMessageSound" data-path="theme.chatWindow.textInput.sendMessageSound">
+                    <input type="hidden" id="textInput-sendSoundLocation" data-path="theme.chatWindow.textInput.sendSoundLocation" value="send_message.mp3">
+                    <input type="hidden" id="textInput-receiveMessageSound" data-path="theme.chatWindow.textInput.receiveMessageSound">
+                    <input type="hidden" id="textInput-receiveSoundLocation" data-path="theme.chatWindow.textInput.receiveSoundLocation" value="receive_message.mp3">
+                </div>
+            </div>
+
+            
+
+            <div class="config-section">
+                <h3>Date/Time Toggle</h3>
+                <div class="config-content collapsed">
+                    <label for="dateTimeToggle-date">Show Date</label>
+                    <input type="checkbox" id="dateTimeToggle-date" data-path="theme.chatWindow.dateTimeToggle.date" checked>
+
+                    <label for="dateTimeToggle-time">Show Time</label>
+                    <input type="checkbox" id="dateTimeToggle-time" data-path="theme.chatWindow.dateTimeToggle.time" checked>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Footer</h3>
+                <div class="config-content collapsed">
+                    <label for="footer-textColor">Text Color <span class="color-display-tile" id="footer-textColor-display"></span></label>
+                    <input type="text" id="footer-textColor" data-path="theme.chatWindow.footer.textColor" value="#303235">
+                    <input type="color" id="footer-textColor-picker" style="display: none;">
+                    <div id="footer-textColor-palette" class="color-palette"></div>
+
+                    <label for="footer-text">Text</label>
+                    <input type="text" id="footer-text" data-path="theme.chatWindow.footer.text" value="Powered by MOJOhealth +"/>
+
+                    <input type="hidden" id="footer-company" data-path="theme.chatWindow.footer.company" value="aichemist">
+                    <input type="hidden" id="footer-companyLink" data-path="theme.chatWindow.footer.companyLink" value="http://aichemist.agency">
+
+                    </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Disclaimer</h3>
+                <div class="config-content collapsed">
+                    <label for="disclaimer-title">Title</label>
+                    <input type="text" id="disclaimer-title" data-path="theme.disclaimer.title" value="Disclaimer">
+
+                    <label for="disclaimer-message">Message (HTML allowed)</label>
+                    <textarea id="disclaimer-message" data-path="theme.disclaimer.message">By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a></textarea>
+
+                    <label for="disclaimer-textColor">Text Color <span class="color-display-tile" id="disclaimer-textColor-display"></span></label>
+                    <input type="text" id="disclaimer-textColor" data-path="theme.disclaimer.textColor" value="#000000">
+                    <input type="color" id="disclaimer-textColor-picker" style="display: none;">
+                    <div id="disclaimer-textColor-palette" class="color-palette"></div>
+
+                    <label for="disclaimer-buttonColor">Button Color <span class="color-display-tile" id="disclaimer-buttonColor-display"></span></label>
+                    <input type="text" id="disclaimer-buttonColor" data-path="theme.disclaimer.buttonColor" value="#3b82f6">
+                    <input type="color" id="disclaimer-buttonColor-picker" style="display: none;">
+                    <div id="disclaimer-buttonColor-palette" class="color-palette"></div>
+
+                    <label for="disclaimer-buttonText">Button Text</label>
+                    <input type="text" id="disclaimer-buttonText" data-path="theme.disclaimer.buttonText" value="Start Chatting">
+
+                    <label for="disclaimer-buttonTextColor">Button Text Color <span class="color-display-tile" id="disclaimer-buttonTextColor-display"></span></label>
+                    <input type="text" id="disclaimer-buttonTextColor" data-path="theme.disclaimer.buttonTextColor" value="#FFFFFF">
+                    <input type="color" id="disclaimer-buttonTextColor-picker" style="display: none;">
+                    <div id="disclaimer-buttonTextColor-palette" class="color-palette"></div>
+
+                    <label for="disclaimer-blurredBackgroundColor">Blurred Background Color <span class="color-display-tile" id="disclaimer-blurredBackgroundColor-display"></span></label>
+                    <input type="text" id="disclaimer-blurredBackgroundColor" data-path="theme.disclaimer.blurredBackgroundColor" value="#666666">
+                    <div id="disclaimer-blurredBackgroundColor-palette" class="color-palette"></div>
+
+                    <label for="disclaimer-backgroundColor">Background Color <span class="color-display-tile" id="disclaimer-backgroundColor-display"></span></label>
+                    <input type="text" id="disclaimer-backgroundColor" data-path="theme.disclaimer.backgroundColor" value="#FFFFFF">
+                    <input type="color" id="disclaimer-backgroundColor-picker" style="display: none;">
+                    <div id="disclaimer-backgroundColor-palette" class="color-palette"></div>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>Custom CSS</h3>
+                <div class="config-content collapsed">
+                    <label for="customCSS">Custom CSS (raw)</label>
+                    <textarea id="customCSS" data-path="theme.customCSS"></textarea>
+                </div>
+            </div>
+            <div class="config-section">
+                <h3>Chatbot Connection</h3>
+                <div class="config-content collapsed">
+                    <label for="chatflowid">Chatflow ID</label>
+                    <input type="text" id="chatflowid" data-path="chatflowid" value="a84f1097-a4cf-4054-9e6b-f092039e0dab">
+
+                    <label for="apiHost">API Host</label>
+                    <input type="text" id="apiHost" data-path="apiHost" value="https://flowise-zx6n.onrender.com">
+                </div>
+            </div>
+            </div>
+        <div id="presets-panel">
+            <h2>Presets <button id="toggle-presets-panel">Collapse/Expand</button></h2>
+            <div id="presets-list" class="config-content">
+                <label for="device-name">Device Name</label>
+                <input type="text" id="device-name" value="My Device">
+                <!-- Presets will be dynamically loaded here -->
+            </div>
+        </div>
+        <div id="chatbot-container"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

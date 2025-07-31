@@ -1,0 +1,326 @@
+/*
+  ========================================
+  AIchemist Agency - Definitive Stylesheet
+  Version: Final
+  ========================================
+*/
+
+/* --- FONT IMPORT --- */
+@import url('https://rsms.me/inter/inter.css');
+
+/* --- THEME & GLOBAL VARIABLES --- */
+:root {
+  /* Color Palette (Matching original index.html) */
+  --color-background: #000000;
+  --color-surface-dark: #111827;    /* gray-900 */
+  
+  --color-text-light: #ffffff;
+  --color-text-base: #d1d5db;       /* gray-300 */
+  --color-text-subtle: #9ca3af;     /* gray-400 */
+
+  --color-accent-gold: #eab308;     /* yellow-500 */
+  --color-accent-gold-light: #facc15; /* yellow-400 */
+  --color-accent-green: #22c55e;    /* green-500 */
+  --color-accent-green-light: #86efac; /* green-300 */
+  --color-accent-green-dark: #166534;  /* green-800 */
+  --color-accent-blue: #3b82f6;     /* blue-500 */
+  --color-accent-purple: #a855f7;   /* purple-500 */
+  --color-accent-red: #ef4444;      /* red-500 */
+  --color-accent-red-light: #f87171;/* red-400 */
+  --color-accent-orange: #f97316;   /* orange-500 */
+  --color-accent-pink: #ec4899;     /* pink-500 */
+  
+  --color-border-muted: rgba(234, 179, 8, 0.2);
+  --color-border-subtle: rgba(234, 179, 8, 0.3);
+  --color-border-hover: rgba(234, 179, 8, 0.4);
+  --color-border-dark: #374151; /* gray-700, for footer */
+
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* --- GLOBAL RESET & BASE STYLES --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-light);
+  min-height: 100vh;
+}
+
+button, a {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+}
+
+a { text-decoration: none; }
+
+ul { list-style: none; }
+
+/* --- LAYOUT & HELPERS --- */
+.hidden { display: none; }
+.max-w-7xl { max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+.max-w-4xl { max-width: 56rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+.max-w-3xl { max-width: 48rem; margin-left: auto; margin-right: auto; }
+.page-view { padding-top: 5rem; }
+
+/* --- HEADER & NAVIGATION --- */
+.header {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.nav { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+.logo-container { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
+.logo-img { height: 2.5rem; width: 2.5rem; border-radius: 0.5rem; }
+.logo-text { 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  color: var(--color-accent-gold); 
+  transition: color 0.2s;
+}
+.logo-container:hover .logo-text {
+  color: var(--color-accent-green);
+}
+.nav-links-desktop { display: none; }
+.nav-link { color: var(--color-text-light); transition: color 0.2s; }
+.nav-link:hover { color: var(--color-accent-green); }
+.nav-link.active { color: var(--color-accent-green); }
+.cta-button-desktop { display: none; }
+.cta-button {
+  background-image: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-green));
+  color: black;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: box-shadow 0.2s;
+}
+.cta-button:hover { box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); }
+#mobile-menu-button { display: block; }
+#mobile-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(1rem);
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 1.5rem 1rem;
+}
+#mobile-menu .nav-link { display: block; width: 100%; text-align: left; padding: 0.5rem 0; }
+#mobile-menu .cta-button { display: block; padding: 0.75rem 1.5rem; margin-top: 1rem; }
+
+/* --- HERO SECTION --- */
+.hero-section { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero-gradient-bg { position: absolute; inset: 0; background-image: linear-gradient(to bottom right, rgba(34, 197, 94, 0.1), transparent, rgba(234, 179, 8, 0.1)); }
+.hero-content { position: relative; z-index: 10; padding-top: 5rem; padding-bottom: 5rem; }
+.hero-grid {
+    display: grid;
+    /* Default to two columns for wider screens */
+    grid-template-columns: repeat(2, 1fr); /* Or your existing multi-column setup */
+    gap: 2rem; /* Or your existing gap */
+    align-items: start; /* Aligns items to the top, can help with varying content heights */
+}
+.hero-tagline-badge { display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(234, 179, 8, 0.2); color: var(--color-accent-gold-light); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; margin-bottom: 1.5rem; }
+.text-hero {
+  font-weight: 700;
+  /* Base size (equivalent to text-4xl) */
+  font-size: 2.25rem; /* 36px */
+  line-height: 1.25;  /* Equivalent to leading-tight */
+  margin-bottom: 1.5rem;
+}
+.hero-text-gradient { background-image: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-subtext { font-size: 1.125rem; line-height: 1.75; color: var(--color-text-base); margin-bottom: 2rem; }
+.metrics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 2rem; }
+.metric-card { text-align: center; padding: 0.75rem; background-color: rgba(255, 255, 255, 0.05); border-radius: 0.75rem; border: 1px solid var(--color-border-muted); transition: border-color 0.2s; }
+.metric-card:hover { border-color: var(--color-border-hover); }
+.metric-value { font-size: 1.25rem; font-weight: 700; color: var(--color-accent-gold); }
+.metric-label { font-size: 0.75rem; color: var(--color-accent-green); }
+.hero-cta-button { background-image: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-green)); color: black; padding: 0.75rem 1.5rem; border-radius: 0.75rem; font-weight: 700; font-size: 1rem; transition: box-shadow 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; }
+.hero-cta-button:hover { box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4); }
+.hero-features {
+    display: flex; /* Assuming it's already flex for its internal layout */
+    flex-direction: column;
+    gap: 1rem; /* Your existing gap for features */
+    margin-top: 2rem; /* Or your existing margin */
+    /* Ensure no conflicting display: none or visibility: hidden here unless intended */
+}
+
+/* --- ROI CALCULATOR --- */
+.roi-calculator { background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(1rem); border: 1px solid var(--color-border-muted); border-radius: 1rem; padding: 1.5rem; }
+.roi-calculator-title { font-size: 1.25rem; font-weight: 700; color: var(--color-accent-gold); text-align: center; margin-bottom: 1.5rem; }
+.roi-input-label { display: block; color: var(--color-accent-green); font-weight: 500; margin-bottom: 0.5rem; font-size: 0.875rem; }
+.roi-input { width: 100%; padding: 0.75rem; background-color: rgba(0, 0, 0, 0.5); border: 1px solid #4b5563; border-radius: 0.5rem; color: var(--color-text-light); font-size: 0.875rem; }
+.roi-input:focus { border-color: var(--color-accent-gold); outline: none; }
+.roi-result-box { background-image: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-green)); color: black; padding: 1rem; border-radius: 0.75rem; text-align: center; }
+.roi-result-value { font-size: 1.875rem; font-weight: 700; margin-bottom: 0.5rem; }
+.roi-result-label { font-weight: 600; font-size: 0.875rem; }
+.roi-cta-button { background-color: rgba(0,0,0,0.3); border: 1px solid rgba(234, 179, 8, 0.4); padding: 0.75rem 1.5rem; border-radius: 0.5rem; width: 100%; transition: background-color 0.2s; font-size: 0.875rem; }
+.roi-cta-button:hover { background-color: rgba(234, 179, 8, 0.1); }
+
+/* --- GENERIC SECTIONS & CARDS --- */
+.section { padding-top: 5rem; padding-bottom: 5rem; }
+.section-dark { background-color: var(--color-surface-dark); }
+.section-title { font-size: 2.25rem; font-weight: 700; text-align: center; margin-bottom: 3rem; }
+.three-col-grid { display: grid; gap: 2rem; }
+.feature-card { background-color: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border: 1px solid var(--color-border-muted); transition: all 0.3s; }
+.feature-card:hover { border-color: var(--color-border-hover); transform: translateY(-0.5rem); }
+.feature-card-icon-box { width: 4rem; height: 4rem; background-image: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-green)); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+.feature-card-title { font-size: 1.25rem; font-weight: 700; color: var(--color-accent-gold); margin-bottom: 1rem; }
+.feature-card-text { color: var(--color-text-base); }
+.problem-solution-grid { display: grid; gap: 3rem; }
+.problem-box { border-left: 4px solid var(--color-accent-red); padding-left: 2rem; }
+.solution-box { border-left: 4px solid var(--color-accent-green); padding-left: 2rem; }
+.problem-solution-title { font-size: 1.875rem; font-weight: 700; margin-bottom: 1.5rem; }
+.problem-title { color: var(--color-accent-red-light); }
+.solution-title { color: var(--color-accent-green); }
+.problem-solution-text { color: var(--color-text-base); font-size: 1.125rem; line-height: 1.75; }
+
+/* --- SOLUTIONS PAGE --- */
+.four-col-grid { display: grid; gap: 2rem; }
+.solution-card { background-color: rgba(255, 255, 255, 0.05); border-radius: 1rem; padding: 2rem; border: 1px solid var(--color-border-muted); display: flex; flex-direction: column; }
+.solution-card-icon-box { width: 4rem; height: 4rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+.solution-card-title { font-size: 1.5rem; font-weight: 700; color: var(--color-accent-gold); margin-bottom: 1rem; }
+.solution-card-text {
+    color: var(--color-text-subtle);
+    margin-bottom: 1.5rem; /* This provides spacing to the subtle text below it */
+    /* flex-grow: 1; /* REMOVED */
+}
+.solution-card-subtle { /* This is the class used in your HTML for the second paragraph */
+  color: var(--color-text-subtle);
+  font-size: 0.875rem;
+  /* No top margin needed as it comes from .solution-card-text's bottom margin */
+  margin-bottom: 1.5rem; /* Spacing before the outcome box */
+}
+.solution-outcome-box { margin-top: auto; background-color: rgba(22, 101, 52, 0.5); color: var(--color-accent-green-light); padding: 1rem; border-radius: 0.5rem; font-size: 0.875rem; }
+.integrations-box { background-image: linear-gradient(to right, rgba(234, 179, 8, 0.1), rgba(34, 197, 94, 0.1)); border-radius: 1rem; padding: 2rem; border: 1px solid var(--color-border-subtle); }
+.integrations-text { text-align: center; color: var(--color-text-base); }
+
+/* --- PROCESS & RESULTS PAGES --- */
+.phase-card { background-color: rgba(255, 255, 255, 0.05); border-radius: 1rem; padding: 2rem; border: 1px solid var(--color-border-muted); }
+.phase-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.phase-number { width: 4rem; height: 4rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; }
+.phase-title { font-size: 1.5rem; font-weight: 700; color: var(--color-accent-gold); }
+.phase-subtext { color: var(--color-text-subtle); }
+.phase-grid { display: grid; gap: 2rem; }
+.phase-deliverables-title, .phase-outcome-title { font-weight: 600; color: var(--color-text-light); margin-bottom: 1rem; }
+.phase-deliverables-list { display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-base); }
+.phase-deliverables-item { 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 0.5rem; 
+}
+.phase-deliverables-item svg {
+    flex-shrink: 0; /* Prevent the SVG from shrinking */
+}
+.phase-outcome-text { color: var(--color-accent-green); }
+.results-card { background-color: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border: 1px solid var(--color-border-muted); }
+.results-card-text { color: var(--color-text-base); margin-bottom: 1rem; }
+.results-list-item {
+    display: flex;
+    /* align-items: center; /* Remove or change this */
+    align-items: flex-start; /* Align items to the start of the cross axis (top for a row) */
+    gap: 0.75rem; /* Your existing gap */
+    /* Add some top margin to the text if the SVG is taller than one line of text,
+       or adjust SVG positioning. This helps align the SVG with the first line. */
+}
+.results-list-item svg {
+    flex-shrink: 0; /* Crucial: Prevents the SVG from shrinking if space is tight */
+    width: 20px;    /* Enforce consistent width */
+    height: 20px;   /* Enforce consistent height */
+    /* Optional: Add a little top margin if needed to perfectly align with the text's baseline or cap-height */
+    /* margin-top: 0.1em; /* Example: adjust as needed */
+}
+.results-list-item span {
+    /* No specific changes needed here unless you want to adjust line-height for better alignment */
+}
+.success-indicators-card { background-color: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border: 1px solid var(--color-border-muted); }
+.success-indicators-grid { display: grid; gap: 2rem; }
+.success-list-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
+.success-list { display: flex; flex-direction: column; gap: 0.75rem; } /* Note: success-list uses results-list-item, so comments above apply */
+
+/* --- CONTACT PAGE --- */
+.contact-form-card { background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(1rem); border: 1px solid var(--color-border-muted); border-radius: 1rem; padding: 2rem; }
+.contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+.contact-form-grid { display: grid; gap: 1.5rem; }
+.contact-form-label { display: block; color: var(--color-accent-green); font-weight: 500; margin-bottom: 0.5rem; }
+.contact-form-input { width: 100%; padding: 1rem; background-color: rgba(0, 0, 0, 0.5); border: 1px solid #4b5563; border-radius: 0.5rem; color: var(--color-text-light); }
+.contact-form-input:focus { border-color: var(--color-accent-gold); outline: none; }
+.contact-form-select { appearance: none; }
+.contact-form-select-wrapper { position: relative; }
+.contact-form-select-arrow { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--color-text-subtle); }
+.contact-form-button { background-image: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-green)); color: black; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 700; font-size: 1.125rem; transition: box-shadow 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.contact-form-button:hover { box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4); }
+.contact-form-button:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* --- FOOTER --- */
+.footer { background-color: var(--color-surface-dark); padding-top: 3rem; padding-bottom: 3rem; border-top: 1px solid var(--color-border-muted); }
+.footer-grid { display: grid; gap: 2rem; margin-bottom: 2rem; }
+.footer-title { font-weight: 600; margin-bottom: 1rem; color: var(--color-text-light); }
+.footer-links { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--color-text-subtle); }
+.footer-links a, .footer-links button { transition: color 0.2s; }
+.footer-links a:hover, .footer-links button:hover { color: var(--color-text-light); }
+.footer-bottom { border-top: 1px solid var(--color-border-dark); padding-top: 2rem; text-align: center; font-size: 0.875rem; color: var(--color-text-subtle); }
+
+/* --- RESPONSIVE STYLES (Media Queries) --- */
+@media (min-width: 768px) { /* md breakpoint */
+  .nav-links-desktop { display: flex; align-items: center; gap: 2rem; }
+  .cta-button-desktop { display: block; padding: 0.5rem 1.5rem; }
+  #mobile-menu-button { display: none; }
+  .metrics-grid { grid-template-columns: repeat(4, 1fr); }
+  .three-col-grid { grid-template-columns: repeat(3, 1fr); }
+  .four-col-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(4, 1fr); }
+  .phase-grid { grid-template-columns: repeat(2, 1fr); }
+.success-indicators-grid {
+    display: grid;
+    /* Creates 3 equal-width columns on larger screens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Your existing gap */
+}
+.contact-form-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .hero-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-subtext { font-size: 1.25rem; }
+  .hero-features { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .text-hero { font-size: 3rem; } /* lg:text-5xl */
+  .roi-calculator { position: sticky; top: 6rem; padding: 2rem; }
+  .roi-input-label, .roi-input, .roi-result-label { font-size: 1rem; }
+  .roi-result-value { font-size: 2.25rem; }
+  .four-col-grid { grid-template-columns: repeat(4, 1fr); }
+  .problem-solution-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1280px) { /* xl breakpoint */
+    .text-hero { font-size: 3.75rem; } /* xl:text-6xl */
+}
+
+/* Add media query for smaller screens to stack them */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .success-indicators-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* Add a media query to stack the columns on smaller screens */
+@media (max-width: 992px) { /* Adjust this breakpoint as needed (e.g., 768px, 992px, 1024px) */
+    .hero-grid {
+        grid-template-columns: 1fr; /* Switch to a single column */
+    }
+
+    /* Optional: You might want to add some margin below the first item (hero text block)
+       when it stacks, to create space before the ROI calculator appears below it. */
+    .hero-grid > div:first-child {
+        margin-bottom: 2rem; /* Or your desired spacing */
+    }
+}

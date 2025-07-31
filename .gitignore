@@ -1,0 +1,78 @@
+# Development tools (minimal)
+node_modules/
+
+# CRITICAL: Development-only PHP handlers (NEVER commit to production)
+send-audit-request-dev.php
+send-audit-request-enhanced.php
+*-dev.php
+*-local.php
+
+# CRITICAL: Local development configuration
+config-local.php
+.env.local
+local.config.php
+
+# CRITICAL: Development logs and data
+logs/
+*.log
+error_log
+php_errors.log
+
+# CRITICAL: Backup system (keep backups local only)
+_backups/
+backup_*/
+
+# Development HTML files
+index-dev.html
+*-dev.html
+*-local.html
+
+# Environment configuration
+.env
+.env.development
+.env.test
+
+# Development directories
+temp/
+tmp/
+cache/
+testing/
+dev/
+
+# IDE and development environment
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-workspace
+.project
+.settings/
+
+# OS generated files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+desktop.ini
+
+# PHP specific
+vendor/
+composer.lock
+composer.phar
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.backup
+*.bak
+*.orig
+*~
+
+# Hostinger specific
+.htaccess.backup
+public_html.zip
+
+# Node.js development dependencies (formatting tools only)
+package-lock.json
+yarn.lock
