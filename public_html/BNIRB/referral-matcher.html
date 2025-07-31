@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Referral Matcher - BNI Referral Builders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .matcher-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        .input-section h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .scenario-input {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .scenario-input:focus {
+            outline: none;
+            border-color: #28a745;
+        }
+        
+        .example-scenarios {
+            margin-top: 15px;
+        }
+        
+        .example-scenarios h4 {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .scenario-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .scenario-chip {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .scenario-chip:hover {
+            background: #e9ecef;
+            border-color: #28a745;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .results-section {
+            display: none;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .results-title {
+            color: #28a745;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        
+        .match-count {
+            background: #e9ecef;
+            color: #495057;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .matches-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .match-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid #28a745;
+            transition: transform 0.3s;
+        }
+        
+        .match-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .match-info h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .match-contact {
+            color: #e74c3c;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .match-score {
+            background: #28a745;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .match-category {
+            background: #17a2b8;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .match-description {
+            color: #495057;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .match-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .keyword-tag {
+            background: #fff3cd;
+            color: #856404;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .match-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .website-link {
+            color: #17a2b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .contact-btn {
+            background: #17a2b8;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        
+        .no-matches {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #28a745;
+        }
+        
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(40, 167, 69, 0.3);
+            border-top: 3px solid #28a745;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .matcher-panel {
+                padding: 20px;
+            }
+            
+            .actions {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎯 Smart Referral Matcher</h1>
+            <p>AI-Powered Member Matching for Perfect Referrals</p>
+        </header>
+        
+        <div class="matcher-panel">
+            <div class="input-section">
+                <h3>Describe Your Referral Scenario</h3>
+                <textarea 
+                    class="scenario-input" 
+                    id="scenarioInput"
+                    placeholder="Example: I have a client who owns a small restaurant and is complaining about high credit card processing fees. They're looking for a better solution that integrates with their POS system..."
+                ></textarea>
+                
+                <div class="example-scenarios">
+                    <h4>Quick Examples</h4>
+                    <div class="scenario-chips">
+                        <span class="scenario-chip" onclick="loadScenario('tech')">
+                            Tech startup needs IT support
+                        </span>
+                        <span class="scenario-chip" onclick="loadScenario('restaurant')">
+                            Restaurant with payment issues
+                        </span>
+                        <span class="scenario-chip" onclick="loadScenario('accident')">
+                            Car accident victim needs lawyer
+                        </span>
+                        <span class="scenario-chip" onclick="loadScenario('homeowner')">
+                            Homeowner with HVAC problems
+                        </span>
+                        <span class="scenario-chip" onclick="loadScenario('business')">
+                            Business owner needs insurance
+                        </span>
+                        <span class="scenario-chip" onclick="loadScenario('retirement')">
+                            Planning for retirement
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button class="btn btn-primary" onclick="findMatches()">
+                    🔍 Find Perfect Matches
+                </button>
+                <button class="btn btn-secondary" onclick="clearScenario()">
+                    Clear
+                </button>
+                <a href="index.html" class="btn btn-secondary">
+                    ← Back to Directory
+                </a>
+            </div>
+        </div>
+        
+        <div class="matcher-panel results-section" id="resultsSection">
+            <div class="results-header">
+                <div class="results-title">Perfect Referral Matches</div>
+                <div class="match-count" id="matchCount">0 matches</div>
+            </div>
+            
+            <div class="loading" id="loading" style="display: none;">
+                Analyzing referral scenario...
+            </div>
+            
+            <div class="matches-grid" id="matchesGrid"></div>
+            
+            <div class="no-matches" id="noMatches" style="display: none;">
+                <h3>No matches found</h3>
+                <p>Try adjusting your scenario description or using different keywords.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ReferralMatcher {
+            constructor() {
+                this.members = [];
+                this.loadMembers();
+            }
+            
+            getApiUrl(endpoint) {
+                // Get current path and ensure we're pointing to the correct API location
+                const currentPath = window.location.pathname;
+                if (currentPath.includes('/BNIRB/')) {
+                    // We're in the BNIRB directory, use relative path
+                    return `./api/${endpoint}`;
+                } else if (currentPath.endsWith('/BNIRB')) {
+                    // We're at /BNIRB without trailing slash, use BNIRB/api path
+                    return `BNIRB/api/${endpoint}`;
+                } else {
+                    // Fallback - construct absolute path
+                    return `/BNIRB/api/${endpoint}`;
+                }
+            }
+            
+            async loadMembers() {
+                try {
+                    const response = await fetch(this.getApiUrl('search.php?action=getAll'));
+                    if (!response.ok) throw new Error('Failed to load members');
+                    this.members = await response.json();
+                } catch (error) {
+                    console.error('Failed to load members:', error);
+                }
+            }
+            
+            async findMatches(scenario) {
+                if (!scenario || scenario.trim().length < 10) {
+                    alert('Please provide a more detailed scenario description');
+                    return [];
+                }
+                
+                // Extract keywords from scenario
+                const keywords = this.extractKeywords(scenario);
+                
+                // Find matches based on referral keywords and services
+                const matches = this.members.map(member => {
+                    let score = 0;
+                    const matchedKeywords = [];
+                    
+                    // Check against referral keywords
+                    member.referral_keywords.forEach(refKeyword => {
+                        keywords.forEach(keyword => {
+                            if (refKeyword.toLowerCase().includes(keyword.toLowerCase()) ||
+                                keyword.toLowerCase().includes(refKeyword.toLowerCase())) {
+                                score += 3;
+                                matchedKeywords.push(refKeyword);
+                            }
+                        });
+                    });
+                    
+                    // Check against services
+                    member.services.forEach(service => {
+                        keywords.forEach(keyword => {
+                            if (service.toLowerCase().includes(keyword.toLowerCase())) {
+                                score += 2;
+                                matchedKeywords.push(service);
+                            }
+                        });
+                    });
+                    
+                    // Check against ideal referral profile
+                    keywords.forEach(keyword => {
+                        if (member.ideal_referral_profile.toLowerCase().includes(keyword.toLowerCase())) {
+                            score += 1;
+                        }
+                    });
+                    
+                    // Check against tags
+                    member.tags.forEach(tag => {
+                        keywords.forEach(keyword => {
+                            if (tag.toLowerCase().includes(keyword.toLowerCase())) {
+                                score += 1;
+                                matchedKeywords.push(tag);
+                            }
+                        });
+                    });
+                    
+                    return {
+                        ...member,
+                        match_score: score,
+                        matched_keywords: [...new Set(matchedKeywords)]
+                    };
+                })
+                // Calculate percentage and filter >= 25%
+                .map(member => ({
+                    ...member,
+                    confidence_percentage: Math.max(25, Math.min(100, member.match_score * 10))
+                }))
+                .filter(member => member.confidence_percentage >= 25)
+                .sort((a, b) => b.confidence_percentage - a.confidence_percentage);
+                
+                return matches;
+            }
+            
+            extractKeywords(scenario) {
+                // Common business/referral keywords to look for
+                const businessKeywords = [
+                    'restaurant', 'business', 'company', 'startup', 'owner', 'manager',
+                    'insurance', 'payment', 'credit card', 'processing', 'fees',
+                    'accident', 'car', 'injury', 'lawyer', 'legal', 'lawsuit',
+                    'HVAC', 'air conditioning', 'heating', 'furnace', 'repair',
+                    'IT', 'computer', 'network', 'cybersecurity', 'technology',
+                    'real estate', 'home', 'house', 'property', 'buying', 'selling',
+                    'retirement', 'financial', 'investment', 'savings', 'planning',
+                    'tax', 'accounting', 'CPA', 'bookkeeping', 'payroll',
+                    'construction', 'building', 'contractor', 'renovation',
+                    'marketing', 'advertising', 'social media', 'website',
+                    'banking', 'loan', 'mortgage', 'financing', 'credit',
+                    'painting', 'plumbing', 'electrical', 'roofing', 'windows',
+                    'health', 'medical', 'chiropractic', 'wellness', 'therapy',
+                    'commercial', 'office', 'warehouse', 'lease', 'rent'
+                ];
+                
+                const words = scenario.toLowerCase()
+                    .replace(/[^\w\s]/g, ' ')
+                    .split(/\s+/)
+                    .filter(word => word.length > 2);
+                
+                // Find business keywords in the scenario
+                const foundKeywords = words.filter(word => 
+                    businessKeywords.some(bw => 
+                        word.includes(bw) || bw.includes(word)
+                    )
+                );
+                
+                // Also include some key phrases
+                const phrases = [
+                    'high fees', 'payment processing', 'car accident', 'credit card',
+                    'small business', 'business owner', 'real estate agent',
+                    'home owner', 'property manager', 'financial advisor'
+                ];
+                
+                phrases.forEach(phrase => {
+                    if (scenario.toLowerCase().includes(phrase)) {
+                        foundKeywords.push(phrase);
+                    }
+                });
+                
+                return [...new Set(foundKeywords)];
+            }
+        }
+        
+        // Predefined scenarios
+        const scenarios = {
+            tech: "I know a tech startup with 15 employees that's constantly dealing with computer problems and network issues. They don't have an IT department and the owner is spending too much time troubleshooting instead of running the business.",
+            
+            restaurant: "My friend owns a small Italian restaurant and is frustrated with their current payment processor. They're paying high fees and the statements are confusing. They want something that integrates with their POS system.",
+            
+            accident: "Someone I know was recently in a car accident and is dealing with back pain. They're worried about medical bills and the insurance company is pressuring them to accept a low settlement.",
+            
+            homeowner: "My neighbor's air conditioning stopped working on the hottest day of summer. They got a really high quote from one company and want a second opinion from someone trustworthy.",
+            
+            business: "A business owner I met is expanding and needs commercial insurance for their new location. Their current agent isn't being responsive and they want someone who understands their industry better.",
+            
+            retirement: "My colleague is 7 years from retirement and is wondering if they've saved enough. They want someone to review their 401k and create a comprehensive retirement plan."
+        };
+        
+        let matcher;
+        
+        // Initialize the matcher
+        document.addEventListener('DOMContentLoaded', () => {
+            matcher = new ReferralMatcher();
+        });
+        
+        function loadScenario(type) {
+            if (scenarios[type]) {
+                document.getElementById('scenarioInput').value = scenarios[type];
+            }
+        }
+        
+        function clearScenario() {
+            document.getElementById('scenarioInput').value = '';
+            document.getElementById('resultsSection').style.display = 'none';
+        }
+        
+        async function findMatches() {
+            const scenario = document.getElementById('scenarioInput').value.trim();
+            
+            if (!scenario) {
+                alert('Please describe your referral scenario first');
+                return;
+            }
+            
+            // Show results section and loading
+            const resultsSection = document.getElementById('resultsSection');
+            const loading = document.getElementById('loading');
+            const matchesGrid = document.getElementById('matchesGrid');
+            const noMatches = document.getElementById('noMatches');
+            const matchCount = document.getElementById('matchCount');
+            
+            resultsSection.style.display = 'block';
+            loading.style.display = 'block';
+            matchesGrid.innerHTML = '';
+            noMatches.style.display = 'none';
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+            
+            try {
+                // Simulate AI processing time
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                const matches = await matcher.findMatches(scenario);
+                
+                loading.style.display = 'none';
+                
+                if (matches.length === 0) {
+                    noMatches.style.display = 'block';
+                    matchCount.textContent = '0 matches';
+                    return;
+                }
+                
+                matchCount.textContent = `${matches.length} match${matches.length === 1 ? '' : 'es'}`;
+                
+                matches.forEach(match => {
+                    const matchCard = createMatchCard(match);
+                    matchesGrid.appendChild(matchCard);
+                });
+                
+            } catch (error) {
+                console.error('Error finding matches:', error);
+                loading.style.display = 'none';
+                noMatches.style.display = 'block';
+                matchCount.textContent = '0 matches';
+            }
+        }
+        
+        function createMatchCard(match) {
+            const card = document.createElement('div');
+            card.className = 'match-card';
+            
+            const keywords = match.matched_keywords.slice(0, 5).map(keyword => 
+                `<span class="keyword-tag">${keyword}</span>`
+            ).join('');
+            
+            const website = match.website ? 
+                `<a href="${match.website}" target="_blank" class="website-link">Visit Website</a>` : 
+                '<span style="color: #ccc;">No Website</span>';
+            
+            card.innerHTML = `
+                <div class="match-header">
+                    <div class="match-info">
+                        <h4>${match.company_name}</h4>
+                        <div class="match-contact">${match.member_name}</div>
+                    </div>
+                    <div class="match-score">${match.confidence_percentage}% Match</div>
+                </div>
+                
+                <span class="match-category">${match.category}</span>
+                
+                <div class="match-description">
+                    ${match.ideal_referral_profile}
+                </div>
+                
+                <div class="match-keywords">
+                    ${keywords}
+                </div>
+                
+                <div class="match-footer">
+                    ${website}
+                    <button class="contact-btn" onclick="contactMember('${match.slug}')">
+                        Contact Member
+                    </button>
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        function contactMember(memberSlug) {
+            // For now, just redirect to the main directory with the member highlighted
+            window.location.href = `index.html#member/${memberSlug}`;
+        }
+    </script>
+</body>
+</html>

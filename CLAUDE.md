@@ -35,6 +35,7 @@ php -S localhost:8080 -t public_html
 - `public_html/` - All web files (upload this to Hostinger)
   - `app/` - Main SPA application
   - `api/v1/` - REST API endpoints
+  - `BNIRB/` - BNI Referral Builders SPA
   - `mvp/` - MVP applications and prototypes
   - `forms/` - Interactive form applications
   - `proposals/` - Interactive proposal system
@@ -135,3 +136,29 @@ scripts/deploy-mvp.sh my-new-feature
 ```
 
 This approach ensures maximum compatibility, performance, and maintainability while leveraging modern web standards and best practices for 2025.
+
+## Application TODOs
+
+### BNI Referral Builders SPA (`public_html/BNIRB/`)
+
+*   **[IN PROGRESS]** **Phase 1: Core Application Shell & Data API**
+    *   **[DONE]** Create `index.html`, `app.js`, `style.css`.
+    *   **[DONE]** Create `api/search.php` endpoint.
+    *   **[DONE]** Create `README.md` for the module.
+    *   **[TODO]** Implement the backend logic in `api/search.php` to handle different queries (all members, single member, search).
+    *   **[TODO]** Implement basic client-side router in `app.js`.
+    *   **[TODO]** Implement the main view in `app.js` to fetch and display all members from the API.
+
+*   **[TODO]** **Phase 2: Search, Filter & Member Detail View**
+    *   **[TODO]** Add search input and filter dropdowns to the UI.
+    *   **[TODO]** Implement live search/filtering functionality in `app.js`.
+    *   **[TODO]** Implement the member detail view, triggered by clicking a member card.
+    *   **[TODO]** Update the router to handle member detail URLs (e.g., `/BNIRB/#/member/some-slug`).
+
+*   **[TODO]** **Phase 3: Automated Referral Matching**
+    *   **[TODO]** In the member detail view, fetch and display the top 3-5 referral matches using the `findReferralMatches()` function.
+    *   **[TODO]** Style the referral matching section for clarity and emphasis.
+
+*   **[TODO]** **Phase 4: Final Polish & Deployment Prep**
+    *   **[TODO]** Conduct a full review of the UI/UX for responsiveness and ease of use.
+    *   **[TODO]** Ensure all code is formatted and well-documented.
